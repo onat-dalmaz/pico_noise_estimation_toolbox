@@ -111,7 +111,7 @@ Open:
 
 This is research code intended for reproducible demonstrations. If you use ideas or figures, please cite:
 
-'''
+```
 @inproceedings{Onat2026Sedona,
   author={Onat Dalmaz and Daniel R. Abraham and Alexander R. Toews and Akshay S. Chaudhari and  Kawin Setsompop and Brian A. Hargreaves},
   title = {Fast {SNR} and g-factor mapping for image-based iterative reconstructions},
@@ -119,4 +119,4 @@ This is research code intended for reproducible demonstrations. If you use ideas
   year      = {2026},
   address   = {Sedona, USA},
 }
-'''
+```
