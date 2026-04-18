@@ -158,3 +158,43 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Cursor assistant working files
+.cursor/
+agent-transcripts/
+
+# Raw multi-GB HDF5 datasets (reconstruct single-slice .npz bundles via scripts/prepare_data.py)
+experiments/cartesian_knee/data/*.h5
+experiments/fastmri_knee/data/*.h5
+
+# SLURM job output
+*.err
+*.out
+slurm-*.out
+
+# Legacy / experimental archives that should not be shipped in the public repo
+experiments/.claude/
+experiments/sim.zip
+experiments/sim/
+new_brain_data/
+old_notebooks/
+xuetong_recon/
+logs/
+figure_panels.zip
+figure_panels/
+data.zip
+real_data.zip
+
+# Temporary / working artifacts from earlier polishing iterations
+*.tex~
+~./
+BUG_FIX_SUMMARY.md
+RESULTS_INTERPRETATION.md
+recreated_plot_scaled.png
+recreated_plot_scaled.svg
+gfactor_probe_viz_slice_120_R_2.png
+gfactor_probe_viz_slice_120_R_2.svg
+convergence_results_report.txt
+convergence_results_summary.csv
+statistical_tests_convergence.txt
+temp_nonlinear_results.txt
