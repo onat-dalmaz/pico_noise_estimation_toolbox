@@ -31,17 +31,6 @@ baseline, Pseudo Multiple Replica (PMR; Robson 2008, §2.1), reconstructs
 $N$ independently-noised k-space draws and takes the voxelwise sample
 variance.
 
-## Figures from the paper
-
-Rendered by the notebooks below and saved under [`docs/figures/`](docs/figures/):
-
-| Manuscript figure | Notebook | Rendered thumbnail |
-|---|---|---|
-| Fig. 2 (Cartesian knee, PICO vs PMR vs analytical) | [`01_cartesian_knee`](notebooks/01_cartesian_knee.ipynb) | [`fig2_cartesian_knee.png`](docs/figures/fig2_cartesian_knee.png) |
-| Fig. 3 (spiral phantom, PICO vs PMR vs N=30 000 surrogate) | [`02_noncartesian_spiral`](notebooks/02_noncartesian_spiral.ipynb) | [`fig3_noncartesian_spiral.png`](docs/figures/fig3_noncartesian_spiral.png) |
-| Fig. 4a (spiral phantom, NRMSE vs N, R=2) | [`02_noncartesian_spiral`](notebooks/02_noncartesian_spiral.ipynb) | [`fig4_noncartesian_spiral_convergence.png`](docs/figures/fig4_noncartesian_spiral_convergence.png) |
-| Fig. 6 (TV-CS fastMRI knee, PICO vs PMR noise maps) | [`03_compressed_sensing`](notebooks/03_compressed_sensing.ipynb) | [`fig6_compressed_sensing.png`](docs/figures/fig6_compressed_sensing.png) |
-
 ## Repository contents
 
 ```
@@ -150,18 +139,20 @@ implemented inline in `notebooks/03_compressed_sensing.ipynb` via
 $\mathbf{u}^{(i)} = \mathbf{J}_f(\mathbf{k}_0)\,\mathbf{v}^{(i)}$.
 
 ## Citation
+PICO is built on top of mr_recon library
+
+## Citation
 
 ```bibtex
-@article{dalmaz2026pico,
-  title   = {Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions},
-  author  = {Dalmaz, Onat and others},
-  journal = {Magnetic Resonance in Medicine},
-  year    = {2026},
-  note    = {In submission. Replace with assigned volume/pages on acceptance.}
+@inproceedings{Onat2026Sedona,
+  author={Onat Dalmaz and Daniel R. Abraham and Alexander R. Toews and Akshay S. Chaudhari and  Kawin Setsompop and Brian A. Hargreaves},
+  title = {Fast {SNR} and g-factor mapping for image-based iterative reconstructions},
+  booktitle = {Proceedings of the ISMRM Workshop on Data Sampling and Reconstruction},
+  year      = {2026},
+  address   = {Sedona, USA},
 }
 ```
 
 ## License
 
-MIT; see [`LICENSE`](LICENSE) (default for academic reproducibility releases;
-replace per corresponding-author preference before public release).
+MIT
