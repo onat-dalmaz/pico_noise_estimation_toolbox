@@ -3,14 +3,14 @@
 This script executes ``notebooks/01_cartesian_knee.ipynb``,
 ``notebooks/02_noncartesian_spiral.ipynb``, and
 ``notebooks/03_compressed_sensing.ipynb`` in-place using ``nbclient`` and
-confirms that
+confirms that every cell executed without raising, including the § 10
+"Verification checkpoint" cell whose ``assert`` statements encode the
+numeric targets derived from Dalmaz et al., *Fast Voxelwise SNR
+Estimation for Iterative MRI Reconstructions*.
 
-  1. every cell executed without raising (including the § 10 "Verification
-     checkpoint" cell, whose ``assert`` statements encode the numeric targets
-     derived from Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative
-     MRI Reconstructions*);
-  2. each notebook produced its expected figure artifacts under
-     ``docs/figures/`` with non-zero size.
+Static PNG thumbnails are no longer shipped: inspection of the
+qualitative results is performed via the in-notebook figures and the
+convergence animations under ``notebooks/assets/``.
 
 Usage::
 
@@ -33,41 +33,18 @@ from typing import Iterable
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 NOTEBOOK_DIR = REPO_ROOT / "notebooks"
-FIG_DIR = REPO_ROOT / "docs" / "figures"
 
 
 @dataclass(frozen=True)
 class NotebookTarget:
     key: str                    # e.g. "01"
     notebook_path: Path
-    expected_figures: tuple[str, ...]
 
 
 TARGETS: tuple[NotebookTarget, ...] = (
-    NotebookTarget(
-        key="01",
-        notebook_path=NOTEBOOK_DIR / "01_cartesian_knee.ipynb",
-        expected_figures=(
-            "fig2_cartesian_knee.png",
-            "fig2_cartesian_knee_convergence.png",
-        ),
-    ),
-    NotebookTarget(
-        key="02",
-        notebook_path=NOTEBOOK_DIR / "02_noncartesian_spiral.ipynb",
-        expected_figures=(
-            "fig3_noncartesian_spiral.png",
-            "fig4_noncartesian_spiral_convergence.png",
-        ),
-    ),
-    NotebookTarget(
-        key="03",
-        notebook_path=NOTEBOOK_DIR / "03_compressed_sensing.ipynb",
-        expected_figures=(
-            "fig6_compressed_sensing.png",
-            "fig6_compressed_sensing_convergence.png",
-        ),
-    ),
+    NotebookTarget(key="01", notebook_path=NOTEBOOK_DIR / "01_cartesian_knee.ipynb"),
+    NotebookTarget(key="02", notebook_path=NOTEBOOK_DIR / "02_noncartesian_spiral.ipynb"),
+    NotebookTarget(key="03", notebook_path=NOTEBOOK_DIR / "03_compressed_sensing.ipynb"),
 )
 
 
@@ -117,17 +94,6 @@ def _execute_notebook(nb_path: Path, timeout: int, kernel_name: str) -> float:
     return elapsed
 
 
-def _verify_figures(target: NotebookTarget) -> list[str]:
-    problems = []
-    for name in target.expected_figures:
-        path = FIG_DIR / name
-        if not path.exists():
-            problems.append(f"missing figure: {path}")
-        elif path.stat().st_size == 0:
-            problems.append(f"empty figure file: {path}")
-    return problems
-
-
 def verify_notebook(target: NotebookTarget, timeout: int, kernel_name: str) -> bool:
     _info(f"executing {target.notebook_path.relative_to(REPO_ROOT)} ...")
     if not target.notebook_path.exists():
@@ -139,13 +105,6 @@ def verify_notebook(target: NotebookTarget, timeout: int, kernel_name: str) -> b
         _fail(f"{target.notebook_path.name} raised during execution: {exc}")
         return False
     _pass(f"{target.notebook_path.name} executed in {elapsed:.1f} s")
-
-    problems = _verify_figures(target)
-    if problems:
-        for p in problems:
-            _fail(p)
-        return False
-    _pass(f"{target.notebook_path.name} saved expected figures under {FIG_DIR.relative_to(REPO_ROOT)}")
     return True
 
 
@@ -165,7 +124,6 @@ def _select_targets(only: Iterable[str] | None) -> list[NotebookTarget]:
 
 
 def run(only: list[str] | None = None, timeout: int = 3600, kernel_name: str = "python3") -> int:
-    FIG_DIR.mkdir(parents=True, exist_ok=True)
     targets = _select_targets(only)
     all_ok = True
     for t in targets:

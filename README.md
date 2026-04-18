@@ -27,7 +27,6 @@ fast_mri_gfactor/
 ├── README.md
 ├── environment.yml
 ├── pyproject.toml
-├── manuscript/                    # source .tex + compiled .pdf
 ├── src/mr_recon/                  # core library (unchanged)
 ├── experiments/
 │   ├── cartesian_knee/data/       # single-slice bundle: slice120_R2.npz
@@ -36,8 +35,8 @@ fast_mri_gfactor/
 ├── notebooks/
 │   ├── 01_cartesian_knee.ipynb
 │   ├── 02_noncartesian_spiral.ipynb
-│   └── 03_compressed_sensing.ipynb
-├── docs/figures/                  # rendered figures (populated by notebooks)
+│   ├── 03_compressed_sensing.ipynb
+│   └── assets/                    # convergence animations (Cartesian, non-Cartesian)
 └── scripts/
     ├── prepare_data.py            # rebuild single-slice bundles from raw h5
     └── verify_notebooks.py        # end-to-end notebook verification
@@ -54,15 +53,28 @@ pip install -e .
 ## Reproducing the paper's experiments
 
 Three self-contained Jupyter notebooks reproduce the qualitative and
-quantitative headline results from §4 of the manuscript:
+quantitative headline results from §4 of the manuscript. Convergence
+animations for the two linear-reconstruction experiments show PICO
+(upper row) and PMR (lower row) refining their voxelwise noise variance
+estimates as the probe/replica count $N$ grows:
 
 1. `notebooks/01_cartesian_knee.ipynb` — §4.1, Fig. 2 — linear CG-SENSE on
    retrospectively undersampled Cartesian knee data (R = 2), validated
    against the closed-form analytical SENSE reference.
+
+   ![Cartesian knee convergence (PICO vs PMR)](notebooks/assets/compressed/cartesian_knee_convergence_small.gif)
+
+   *(full-size animation: [`notebooks/assets/cartesian_knee_convergence.gif`](notebooks/assets/cartesian_knee_convergence.gif))*
+
 2. `notebooks/02_noncartesian_spiral.ipynb` — §4.2, Figs. 3–4 —
    Tikhonov-regularized CG-SENSE on non-Cartesian spiral brain phantom
    data (R = 2), validated against a high-replica PMR surrogate reference
    (N = 30 000, convergence certified per Appendix D).
+
+   ![Non-Cartesian phantom convergence (PICO vs PMR)](notebooks/assets/compressed/noncartesian_phantom_convergence_small.gif)
+
+   *(full-size animation: [`notebooks/assets/noncartesian_phantom_convergence.gif`](notebooks/assets/noncartesian_phantom_convergence.gif))*
+
 3. `notebooks/03_compressed_sensing.ipynb` — §4.3, Fig. 6 — TV-regularized
    compressed-sensing reconstruction on retrospectively undersampled
    fastMRI knee data (R = 2), validated against a method-specific high-sample
