@@ -14,22 +14,11 @@ reference is available.
 
 ## What PICO does
 
-PICO probes the implicit covariance operator
-$\boldsymbol{\Sigma}_{\hat{\mathbf{x}}} = \mathbf{R}\mathbf{R}^{\mathrm{H}}$
-with unit-magnitude random-phase probes $\mathbf{v}^{(i)} = e^{\mathrm{j}\theta^{(i)}}$
-and estimates
-$\hat{\boldsymbol{\sigma}}^2_{\hat{\mathbf{x}}}
-  = \frac{1}{N}\sum_{i=1}^{N} \mathbf{v}^{(i)*} \odot \big(\boldsymbol{\Sigma}_{\hat{\mathbf{x}}}\mathbf{v}^{(i)}\big)$
-(manuscript §2.2.1, Eq. (13)). The covariance–vector products reuse the same
-$\mathbf{A}$ / $\mathbf{A}^{\mathrm{H}}$ primitives as CG-SENSE — no separate
-matrix is formed — and the unit-magnitude random-phase probe attains the
-minimum kurtosis ($\kappa=1$) allowable for complex Hermitian operators,
-giving the lowest estimator variance per sample (§2.2.4). For nonlinear
-reconstructions (§2.2.5), PICO probes the Jacobian
-$\mathbf{J}_f(\mathbf{k}_0)$ via automatic differentiation. The companion
-baseline, Pseudo Multiple Replica (PMR; Robson 2008, §2.1), reconstructs
-$N$ independently-noised k-space draws and takes the voxelwise sample
-variance.
+PICO probes the implicit covariance operator $\boldsymbol{\Sigma}_{\hat{\mathbf{x}}} = \mathbf{R}\mathbf{R}^{\mathrm{H}}$ with unit-magnitude random-phase probes $\mathbf{v}^{(i)} = e^{\mathrm{j}\theta^{(i)}}$ and estimates
+
+$$\hat{\boldsymbol{\sigma}}^2_{\hat{\mathbf{x}}} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{v}^{(i)*} \odot \big(\boldsymbol{\Sigma}_{\hat{\mathbf{x}}}\mathbf{v}^{(i)}\big)$$
+
+(manuscript §2.2.1, Eq. (13)). The covariance–vector products reuse the same $\mathbf{A}$ / $\mathbf{A}^{\mathrm{H}}$ primitives as CG-SENSE — no separate matrix is formed — and the unit-magnitude random-phase probe attains the minimum kurtosis ($\kappa=1$) allowable for complex Hermitian operators, giving the lowest estimator variance per sample (§2.2.4). For nonlinear reconstructions (§2.2.5), PICO probes the Jacobian $\mathbf{J}_f(\mathbf{k}_0)$ via automatic differentiation. The companion baseline, Pseudo Multiple Replica (PMR; Robson 2008, §2.1), reconstructs $N$ independently-noised k-space draws and takes the voxelwise sample variance.
 
 ## Repository contents
 
@@ -139,9 +128,8 @@ implemented inline in `notebooks/03_compressed_sensing.ipynb` via
 $\mathbf{u}^{(i)} = \mathbf{J}_f(\mathbf{k}_0)\,\mathbf{v}^{(i)}$.
 
 ## Citation
-PICO is built on top of mr_recon library
 
-## Citation
+PICO is built on top of the `mr_recon` library.
 
 ```bibtex
 @inproceedings{Onat2026Sedona,
