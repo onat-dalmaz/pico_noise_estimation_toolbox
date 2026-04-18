@@ -1,163 +1,167 @@
-# MRI G-Factor Analysis: Accelerated Parallel Imaging Reconstruction
+# Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions
 
-Advanced computational methods for g-factor calculation in parallel MRI with significant performance improvements over traditional approaches.
+Companion code for Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative
+MRI Reconstructions* (submitted to *Magnetic Resonance in Medicine*, 2026).
+The manuscript is shipped under [`manuscript/g_factor_MRM.pdf`](manuscript/g_factor_MRM.pdf)
+(source: [`manuscript/g_factor_MRM.tex`](manuscript/g_factor_MRM.tex)).
 
-## 🎯 Overview
+This repository implements **PICO — Probing Image-space COvariance** —
+a stochastic diagonal estimator for voxelwise noise variance maps
+$\hat{\boldsymbol{\sigma}}^2_{\hat{\mathbf{x}}} = \mathrm{diag}(\boldsymbol{\Sigma}_{\hat{\mathbf{x}}})$
+in linear and nonlinear MRI reconstructions. The g-factor map reported for
+validation is a derived ratio (manuscript Eq. (11)) when a fully-sampled
+reference is available.
 
-This repository contains research code and interactive demonstrations for novel g-factor calculation methods in parallel MRI reconstruction. Our diagnostic approach provides 15-30x computational speedup while maintaining accuracy compared to traditional pseudo-multiple replica (PMR) techniques.
+## What PICO does
 
-### 🔬 Key Innovation
-- **Diagnostic Hutchinson's Method**: Direct matrix diagonalization avoiding expensive Monte Carlo sampling
-- **Performance**: 15-30x faster than PMR with equivalent accuracy
-- **Applications**: Cartesian and non-Cartesian parallel imaging reconstruction
+PICO probes the implicit covariance operator
+$\boldsymbol{\Sigma}_{\hat{\mathbf{x}}} = \mathbf{R}\mathbf{R}^{\mathrm{H}}$
+with unit-magnitude random-phase probes $\mathbf{v}^{(i)} = e^{\mathrm{j}\theta^{(i)}}$
+and estimates
+$\hat{\boldsymbol{\sigma}}^2_{\hat{\mathbf{x}}}
+  = \frac{1}{N}\sum_{i=1}^{N} \mathbf{v}^{(i)*} \odot \big(\boldsymbol{\Sigma}_{\hat{\mathbf{x}}}\mathbf{v}^{(i)}\big)$
+(manuscript §2.2.1, Eq. (13)). The covariance–vector products reuse the same
+$\mathbf{A}$ / $\mathbf{A}^{\mathrm{H}}$ primitives as CG-SENSE — no separate
+matrix is formed — and the unit-magnitude random-phase probe attains the
+minimum kurtosis ($\kappa=1$) allowable for complex Hermitian operators,
+giving the lowest estimator variance per sample (§2.2.4). For nonlinear
+reconstructions (§2.2.5), PICO probes the Jacobian
+$\mathbf{J}_f(\mathbf{k}_0)$ via automatic differentiation. The companion
+baseline, Pseudo Multiple Replica (PMR; Robson 2008, §2.1), reconstructs
+$N$ independently-noised k-space draws and takes the voxelwise sample
+variance.
 
-## 📚 Interactive Demonstrations
+## Figures from the paper
 
-### Jupyter Notebook Demos
-Located in `notebooks/` directory:
+Rendered by the notebooks below and saved under [`docs/figures/`](docs/figures/):
 
-#### 1. Non-Cartesian Phantom Analysis
-**File**: `notebooks/non_cartesian_phantom_gfactor_comparison.ipynb`
+| Manuscript figure | Notebook | Rendered thumbnail |
+|---|---|---|
+| Fig. 2 (Cartesian knee, PICO vs PMR vs analytical) | [`01_cartesian_knee`](notebooks/01_cartesian_knee.ipynb) | [`fig2_cartesian_knee.png`](docs/figures/fig2_cartesian_knee.png) |
+| Fig. 3 (spiral phantom, PICO vs PMR vs N=30 000 surrogate) | [`02_noncartesian_spiral`](notebooks/02_noncartesian_spiral.ipynb) | [`fig3_noncartesian_spiral.png`](docs/figures/fig3_noncartesian_spiral.png) |
+| Fig. 4a (spiral phantom, NRMSE vs N, R=2) | [`02_noncartesian_spiral`](notebooks/02_noncartesian_spiral.ipynb) | [`fig4_noncartesian_spiral_convergence.png`](docs/figures/fig4_noncartesian_spiral_convergence.png) |
+| Fig. 6 (TV-CS fastMRI knee, PICO vs PMR noise maps) | [`03_compressed_sensing`](notebooks/03_compressed_sensing.ipynb) | [`fig6_compressed_sensing.png`](docs/figures/fig6_compressed_sensing.png) |
 
-Demonstrates g-factor analysis on a non-Cartesian phantom dataset with spiral trajectory.
+## Repository contents
 
-**Key Results**:
-- 15-20x speedup over PMR method
-- Equivalent accuracy for N ≥ 50
-- Robust performance on complex k-space trajectories
+```
+fast_mri_gfactor/
+├── README.md
+├── environment.yml
+├── pyproject.toml
+├── manuscript/                    # source .tex + compiled .pdf
+├── src/mr_recon/                  # core library (unchanged)
+├── experiments/
+│   ├── cartesian_knee/data/       # single-slice bundle: slice120_R2.npz
+│   ├── noncartesian_phantom/data/ # slice_R2_bundle.npz + raw .npy arrays
+│   └── compressed_sensing/data/   # slice017_R2.npz
+├── notebooks/
+│   ├── 01_cartesian_knee.ipynb
+│   ├── 02_noncartesian_spiral.ipynb
+│   └── 03_compressed_sensing.ipynb
+├── docs/figures/                  # rendered figures (populated by notebooks)
+└── scripts/
+    ├── prepare_data.py            # rebuild single-slice bundles from raw h5
+    └── verify_notebooks.py        # end-to-end notebook verification
+```
 
-![Non-Cartesian Phantom Convergence](notebooks/assets/compressed/noncartesian_phantom_convergence_small.gif)
+## Installation
 
-*[Full-size animation available](notebooks/assets/noncartesian_phantom_convergence.gif)*
-
-#### 2. Cartesian Knee Analysis
-**File**: `notebooks/cartesian_knee_gfactor_comparison.ipynb`
-
-Demonstrates g-factor analysis on clinical Cartesian knee MRI data with analytical ground truth.
-
-**Key Results**:
-- 20-30x speedup over PMR method
-- Analytical reference for accuracy validation
-- Excellent performance on structured Cartesian undersampling
-
-![Cartesian Knee Convergence](notebooks/assets/compressed/cartesian_knee_convergence_small.gif)
-
-*[Full-size animation available](notebooks/assets/cartesian_knee_convergence.gif)*
-
-## 🚀 Quick Start
-
-### Prerequisites
 ```bash
-# Clone repository
-git clone https://github.com/your-repo/mr_recon.git
-cd mr_recon
-
-# Install dependencies
 conda env create -f environment.yml
 conda activate mr_recon_env
-
-# Install additional packages if needed
-pip install h5py einops
+pip install -e .
 ```
 
-### Running the Demos
+## Reproducing the paper's experiments
 
-1. **Launch Jupyter**:
-   ```bash
-   jupyter notebook
-   ```
+Three self-contained Jupyter notebooks reproduce the qualitative and
+quantitative headline results from §4 of the manuscript:
 
-2. **Open desired notebook**:
-   - For non-Cartesian phantom: `notebooks/non_cartesian_phantom_gfactor_comparison.ipynb`
-   - For Cartesian knee: `notebooks/cartesian_knee_gfactor_comparison.ipynb`
+1. `notebooks/01_cartesian_knee.ipynb` — §4.1, Fig. 2 — linear CG-SENSE on
+   retrospectively undersampled Cartesian knee data (R = 2), validated
+   against the closed-form analytical SENSE reference.
+2. `notebooks/02_noncartesian_spiral.ipynb` — §4.2, Figs. 3–4 —
+   Tikhonov-regularized CG-SENSE on non-Cartesian spiral brain phantom
+   data (R = 2), validated against a high-replica PMR surrogate reference
+   (N = 30 000, convergence certified per Appendix D).
+3. `notebooks/03_compressed_sensing.ipynb` — §4.3, Fig. 6 — TV-regularized
+   compressed-sensing reconstruction on retrospectively undersampled
+   fastMRI knee data (R = 2), validated against a method-specific high-sample
+   gold reference (N = 10 000 for both PICO and PMR, Appendix D) via the
+   Jacobian extension of PICO.
 
-3. **Configure parameters** (optional):
-   - `R`: Acceleration factor (default: 2)
-   - `N_values`: Noise replica counts to test (default: [10, 20, 50])
-   - `display_mode`: 'g' or 'inv_g' for g-factor vs 1/g-factor display
+To regenerate the single-slice data bundles from the raw HDF5 sources:
 
-4. **Run all cells** to generate results and visualizations
-
-## 📊 Performance Summary
-
-| Dataset | Method | N=10 | N=20 | N=50 | Speedup |
-|---------|--------|------|------|------|---------|
-| Non-Cartesian Phantom | PMR | 7.8s | 13.9s | 34.2s | 1x |
-| | Our Method | 0.81s | 1.6s | 3.8s | **15-20x** |
-| Cartesian Knee | PMR | 4.3s | 7.7s | 19.1s | 1x |
-| | Our Method | 0.26s | 0.50s | 1.3s | **20-30x** |
-
-## 🏗️ Method Description
-
-### Traditional PMR Approach
-- Generates N independent noise realizations
-- Reconstructs each noise-corrupted dataset
-- Computes g-factor from noise amplification statistics
-- **Limitation**: Computationally expensive (scales with N × reconstruction time)
-
-### Our Diagnostic Approach
-- Uses Hutchinson's randomized trace estimation
-- Diagonalizes the noise amplification operator directly
-- Achieves equivalent accuracy with dramatically reduced computation
-- **Advantage**: Near-constant time complexity regardless of N
-
-## 📈 Convergence Analysis
-
-Both notebooks demonstrate convergence behavior as a function of noise replica count (N):
-
-- **PMR Method**: Monte Carlo convergence (1/√N)
-- **Our Method**: Deterministic diagonalization (exact for sufficiently large N)
-- **Practical Result**: N=50 provides converged results for both methods
-
-## 🎨 Visualization Features
-
-### Interactive Plots
-- Side-by-side comparison of PMR vs our method
-- Color-coded g-factor maps with consistent scaling
-- Timing analysis with performance metrics
-- Convergence animations showing improvement with N
-
-### Output Files
-Each notebook generates:
-- PNG/SVG comparison plots
-- Timing data (`.txt` files)
-- Reconstructed images
-- Comprehensive logging
-
-## 🔬 Technical Details
-
-### G-Factor Definition
-The g-factor quantifies noise amplification in parallel MRI:
-
-```
-g = σ_reconstructed / σ_coil
+```bash
+python scripts/prepare_data.py
 ```
 
-where σ_reconstructed is the reconstructed noise standard deviation and σ_coil is the individual coil noise.
+To verify all three notebooks reproduce the paper's numerical results
+end-to-end:
 
-### Acceleration Factor (R)
-- R=2: 2x acceleration (every other phase encode line)
-- Higher R values increase g-factor values and computational challenge
+```bash
+python scripts/verify_notebooks.py
+# or
+pytest scripts/
+```
 
-### Regularization (λ)
-- L2 regularization parameter for reconstruction stability
-- Typical values: 0.01-1.0 depending on SNR
+Each notebook's final "Verification checkpoint" cell ```assert```s against
+the numeric targets in manuscript Table and Figure captions (single-slice
+tolerances widened relative to multi-subject averages, per the spec in
+`AGENTS.md` / the companion task document).
 
-## 📚 References
+## Data
 
-1. **Hutchinson's Method**: Randomized algorithms for trace estimation
-2. **PMR Technique**: Pruessmann et al., "SENSE: Sensitivity encoding for fast MRI"
-3. **G-Factor Theory**: Robson et al., "Comprehensive quantification of signal-to-noise ratio and g-factor for image-based and k-space-based parallel imaging reconstructions"
+The full multi-subject datasets used in the manuscript are large and not
+redistributed here; each notebook ships with a single representative slice
+(≈ 6–24 MB) sufficient to reproduce the qualitative convergence behavior of
+PICO vs PMR. Sources are cited per §3.1 of the manuscript:
 
-## 🤝 Contributing
+- Cartesian knee — Stanford knee corpus on [mridata.org](https://mridata.org/)
+  (Epperson 2013); slice 120 of subject
+  `efa383b6-9446-438a-9901-1fe951653dbd`.
+- Non-Cartesian phantom — GE 3T Ultra High Performance spiral acquisition
+  of a physical brain phantom; single slice.
+- Compressed sensing — [fastMRI knee corpus](https://fastmri.med.nyu.edu/)
+  (Zbontar 2018); slice 17 of subject `file1000000`.
 
-This is research code for demonstrating g-factor calculation improvements. For questions about the underlying methods, please refer to the methodology documentation.
+To reproduce the full multi-subject statistics reported in Tables and Figures
+of the manuscript, download the source datasets and use the existing
+`scripts/run_N_comparison.py` and `scripts/plot_nonlinear_final_comparison.py`
+entry points together with the SLURM templates under `slurm_scripts/`.
 
-## 📄 License
+## Core API (`src/mr_recon/gfactor.py`)
 
-Research code - please cite appropriately if used in your work.
+- `gfactor_SENSE_diag(...)` — PICO for linear reconstructions (§2.2).
+- `gfactor_SENSE_PMR(...)` — PMR baseline (§2.1).
+- `diagonal_estimator(...)` — lower-level stochastic diagonal estimator
+  (Eq. (13)).
+- `incremental_diagonal_estimator(...)` — shared-probe version for
+  monotonic convergence plots.
+- `incremental_calc_variance_PMR(...)` — shared-replica version for
+  matched comparisons.
+- `gfactor_sense(mps, Rx, Ry, l2_reg)` — closed-form analytical SENSE
+  g-factor used as the Cartesian reference.
 
----
+The Jacobian-based PICO variant for nonlinear reconstructions (§2.2.5) is
+implemented inline in `notebooks/03_compressed_sensing.ipynb` via
+`torch.func.jvp`; it follows the same estimator as Eq. (13) with
+$\mathbf{u}^{(i)} = \mathbf{J}_f(\mathbf{k}_0)\,\mathbf{v}^{(i)}$.
 
-**Research Project**: Accelerated G-Factor Calculation for Parallel MRI
-**Focus**: Computational efficiency improvements in quantitative MRI assessment
+## Citation
+
+```bibtex
+@article{dalmaz2026pico,
+  title   = {Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions},
+  author  = {Dalmaz, Onat and others},
+  journal = {Magnetic Resonance in Medicine},
+  year    = {2026},
+  note    = {In submission. Replace with assigned volume/pages on acceptance.}
+}
+```
+
+## License
+
+MIT; see [`LICENSE`](LICENSE) (default for academic reproducibility releases;
+replace per corresponding-author preference before public release).
