@@ -1,9 +1,7 @@
 # Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions
 
-Companion code for Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative
+PICO toolbox for Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative
 MRI Reconstructions* (submitted to *Magnetic Resonance in Medicine*, 2026).
-The manuscript is shipped under [`manuscript/g_factor_MRM.pdf`](manuscript/g_factor_MRM.pdf)
-(source: [`manuscript/g_factor_MRM.tex`](manuscript/g_factor_MRM.tex)).
 
 This repository implements **PICO — Probing Image-space COvariance** —
 a stochastic diagonal estimator for voxelwise noise variance maps
