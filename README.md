@@ -10,6 +10,8 @@ in linear and nonlinear MRI reconstructions. The g-factor map reported for
 validation is a derived ratio (manuscript Eq. (11)) when a fully-sampled
 reference is available.
 
+![Cartesian knee convergence (PICO vs PMR)](notebooks/assets/main.png)
+
 ## What PICO does
 
 PICO probes the implicit covariance operator $\boldsymbol{\Sigma}_{\hat{\mathbf{x}}} = \mathbf{R}\mathbf{R}^{\mathrm{H}}$ with unit-magnitude random-phase probes $\mathbf{v}^{(i)} = e^{\mathrm{j}\theta^{(i)}}$ and estimates
