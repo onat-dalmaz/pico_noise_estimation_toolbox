@@ -153,6 +153,5 @@ PICO is built on top of the `mr_recon` library.
 }
 ```
 
-## License
-
-MIT
+## Acknowledgements
+This code uses libraries from [mr_recon](https://github.com/danielabrahamgit/mr_recon) library.
