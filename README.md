@@ -1,9 +1,7 @@
 # Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions
 
 PICO toolbox for Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative
-MRI Reconstructions* (under revision for *Magnetic Resonance in Medicine*).
-This snapshot is licensed under the [MIT License](LICENSE). No immutable
-manuscript-associated release or archival DOI is claimed.
+MRI Reconstructions* (submitted to *Magnetic Resonance in Medicine*, 2026).
 
 This repository implements **PICO — Probing Image-space COvariance** —
 a stochastic diagonal estimator for voxelwise noise variance maps
@@ -20,18 +18,14 @@ PICO probes the implicit covariance operator $\boldsymbol{\Sigma}_{\hat{\mathbf{
 
 $$\hat{\boldsymbol{\sigma}}^2_{\hat{\mathbf{x}}} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{v}^{(i)*} \odot \big(\boldsymbol{\Sigma}_{\hat{\mathbf{x}}}\mathbf{v}^{(i)}\big)$$
 
-(manuscript §2.2.1, Eq. (13)). The covariance–vector products reuse the same $\mathbf{A}$ / $\mathbf{A}^{\mathrm{H}}$ primitives as CG-SENSE — no separate matrix is formed — and the unit-magnitude random-phase probe attains the minimum kurtosis ($\kappa=1$) in the stated i.i.d., zero-mean, unit-variance complex probe class (§2.2.4). For nonlinear reconstructions (§2.2.5), PICO estimates a local first-order covariance by averaging $|J_f(\mathbf{b}_0)\mathbf{q}|^2$ over isotropic input-space probes via automatic differentiation. The companion baseline, Pseudo Multiple Replica (PMR; Robson 2008, §2.1), reconstructs $N$ independently-noised k-space draws and takes the voxelwise sample variance.
+(manuscript §2.2.1, Eq. (13)). The covariance–vector products reuse the same $\mathbf{A}$ / $\mathbf{A}^{\mathrm{H}}$ primitives as CG-SENSE — no separate matrix is formed — and the unit-magnitude random-phase probe attains the minimum kurtosis ($\kappa=1$) allowable for complex Hermitian operators, giving the lowest estimator variance per sample (§2.2.4). For nonlinear reconstructions (§2.2.5), PICO probes the Jacobian $\mathbf{J}_f(\mathbf{k}_0)$ via automatic differentiation. The companion baseline, Pseudo Multiple Replica (PMR; Robson 2008, §2.1), reconstructs $N$ independently-noised k-space draws and takes the voxelwise sample variance.
 
 ## Repository contents
 
 ```
-pico_noise_estimation_toolbox/
+fast_mri_gfactor/
 ├── README.md
-├── LICENSE                        # MIT
-├── CITATION.cff
-├── environment.yml               # conda environment (includes pandas)
-├── requirements.txt
-├── reproducibility_manifest.json
+├── environment.yml
 ├── pyproject.toml
 ├── src/mr_recon/                  # core library (unchanged)
 ├── experiments/
@@ -74,8 +68,8 @@ estimates as the probe/replica count $N$ grows:
 
 2. `notebooks/02_noncartesian_spiral.ipynb` — §4.2, Figs. 3–4 —
    Tikhonov-regularized CG-SENSE on non-Cartesian spiral brain phantom
-   data (R = 2), validated against independent float64 noise-only PMR
-   reference streams (Section S7).
+   data (R = 2), validated against a high-replica PMR surrogate reference
+   (N = 30 000, convergence certified per Appendix D).
 
    ![Non-Cartesian phantom convergence (PICO vs PMR)](notebooks/assets/compressed/noncartesian_phantom_convergence_small.gif)
 
@@ -142,9 +136,8 @@ entry points together with the SLURM templates under `slurm_scripts/`.
 
 The Jacobian-based PICO variant for nonlinear reconstructions (§2.2.5) is
 implemented inline in `notebooks/03_compressed_sensing.ipynb` via
-`torch.func.jvp` as an input-space factor estimator: isotropic probes
-$\mathbf{q}$ are drawn in the data domain and the accumulator is
-$|\mathbf{J}_f(\mathbf{b}_0)\mathbf{q}|^2$.
+`torch.func.jvp`; it follows the same estimator as Eq. (13) with
+$\mathbf{u}^{(i)} = \mathbf{J}_f(\mathbf{k}_0)\,\mathbf{v}^{(i)}$.
 
 ## Citation
 
