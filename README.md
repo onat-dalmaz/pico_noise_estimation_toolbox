@@ -1,48 +1,26 @@
 # Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions
 
-PICO toolbox for Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative
-MRI Reconstructions* (submitted to *Magnetic Resonance in Medicine*, 2026).
+PICO (Probing Image-space COvariance) estimates voxelwise noise variance for MRI reconstructions. This repository accompanies Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions* (MRM-26-26969).
 
-This repository implements **PICO — Probing Image-space COvariance** —
-a stochastic diagonal estimator for voxelwise noise variance maps
-$\hat{\boldsymbol{\sigma}}^2_{\hat{\mathbf{x}}} = \mathrm{diag}(\boldsymbol{\Sigma}_{\hat{\mathbf{x}}})$
-in linear and nonlinear MRI reconstructions. The g-factor map reported for
-validation is a derived ratio (manuscript Eq. (11)) when a fully-sampled
-reference is available.
+## Revision source snapshot
 
-![PICO](notebooks/assets/main.png)
+The [revision_20261009](revision_20261009/) directory contains the retained revision drivers, their numerical dependencies, configuration records, and a file-hash manifest. Its [README](revision_20261009/README.md) identifies the measured pipelines and required inputs. This snapshot supplements the original demonstration notebooks below; those notebooks retain their historical settings and are not a reproduction of all revised results.
 
-## What PICO does
+The source snapshot contains no MRI or sensitivity-map arrays, patient identifiers, or participant-membership mapping. Full reruns require authorized source data and the archived coil maps. Map hashes identify the retained calibration outputs; they do not recover missing calibration-generation settings.
 
-PICO probes the implicit covariance operator $\boldsymbol{\Sigma}_{\hat{\mathbf{x}}} = \mathbf{R}\mathbf{R}^{\mathrm{H}}$ with unit-magnitude random-phase probes $\mathbf{v}^{(i)} = e^{\mathrm{j}\theta^{(i)}}$ and estimates
+The revised linear comparisons use equal sample counts, a Cartesian analytical reference, and independent high-budget PMR references for the non-Cartesian cases. The physical phantom reference has 100,000 replicas at R=2 and 60,000 at R=3/4; the in vivo spiral brain reference has 50,000 replicas. Displayed linear maps are reciprocal 1/g, while quantitative NRMSE uses g. Both methods share their respective randomness between accelerated and fully sampled reconstructions.
 
-$$\hat{\boldsymbol{\sigma}}^2_{\hat{\mathbf{x}}} = \frac{1}{N}\sum_{i=1}^{N} \mathbf{v}^{(i)*} \odot \big(\boldsymbol{\Sigma}_{\hat{\mathbf{x}}}\mathbf{v}^{(i)}\big)$$
+The revised CS comparison uses equal N=2,000 across 36 slices from 12 fastMRI volumes and 11 participants. The timed PICO path uses cached manual tangent propagation through a finite 30-step FISTA-type reconstruction with 50-step complex-TV proximal solves. Its measured runtime describes that implementation; map agreement with PMR at equal N is not an independent true-covariance accuracy test. Noise-level and TV-strength sweeps use equal N=3,000.
 
-(manuscript §2.2.1, Eq. (13)). The covariance–vector products reuse the same $\mathbf{A}$ / $\mathbf{A}^{\mathrm{H}}$ primitives as CG-SENSE — no separate matrix is formed — and the unit-magnitude random-phase probe attains the minimum kurtosis ($\kappa=1$) allowable for complex Hermitian operators, giving the lowest estimator variance per sample (§2.2.4). For nonlinear reconstructions (§2.2.5), PICO probes the Jacobian $\mathbf{J}_f(\mathbf{k}_0)$ via automatic differentiation. The companion baseline, Pseudo Multiple Replica (PMR; Robson 2008, §2.1), reconstructs $N$ independently-noised k-space draws and takes the voxelwise sample variance.
+## Estimator scope
 
-## Repository contents
+For a linear reconstruction, PICO probes the image covariance directly without forming a dense covariance matrix. The stochastic diagonal identity is unbiased when the probe second moment is the identity. The random-phase variance argument concerns independent proper complex probes with unit second moment; it is not a global optimality claim over all probe families.
 
-```
-fast_mri_gfactor/
-├── README.md
-├── environment.yml
-├── pyproject.toml
-├── src/mr_recon/                  # core library (unchanged)
-├── experiments/
-│   ├── cartesian_knee/data/       # single-slice bundle: slice120_R2.npz
-│   ├── noncartesian_phantom/data/ # slice_R2_bundle.npz + raw .npy arrays
-│   └── compressed_sensing/data/   # slice017_R2.npz
-├── notebooks/
-│   ├── 01_cartesian_knee.ipynb
-│   ├── 02_noncartesian_spiral.ipynb
-│   ├── 03_compressed_sensing.ipynb
-│   └── assets/                    # convergence animations (Cartesian, non-Cartesian)
-└── scripts/
-    ├── prepare_data.py            # rebuild single-slice bundles from raw h5
-    └── verify_notebooks.py        # end-to-end notebook verification
-```
+Nonquadratic regularized reconstructions use a local Jacobian model of noise propagation. The generic examples use automatic differentiation; the current timed CS experiment uses the explicit cached tangent path described above. The non-Cartesian implementation uses a Toeplitz normal-operator approximation. The archived phantom check found approximately 0.020% g-map discrepancy at its tested setting; that check is not a general error bound or a brain validation.
 
-## Installation
+## Installation and original examples
+
+The original standalone notebooks were assessed in the MR Reproducibility Study Group review. They provide representative single-slice examples with retained historical budgets.
 
 ```bash
 conda env create -f environment.yml
@@ -50,108 +28,25 @@ conda activate mr_recon_env
 pip install -e .
 ```
 
-## Reproducing the paper's experiments
+- [Cartesian knee notebook](notebooks/01_cartesian_knee.ipynb): CG-SENSE and analytical SENSE reference.
+- [Non-Cartesian notebook](notebooks/02_noncartesian_spiral.ipynb): physical brain phantom with spiral sampling.
+- [Compressed-sensing notebook](notebooks/03_compressed_sensing.ipynb): Jacobian propagation through TV reconstruction.
 
-Three self-contained Jupyter notebooks reproduce the qualitative and
-quantitative headline results from §4 of the manuscript. Convergence
-animations for the two linear-reconstruction experiments show PICO
-(upper row) and PMR (lower row) refining their voxelwise noise variance
-estimates as the probe/replica count $N$ grows:
+The original preparation and notebook-checking entry points remain `scripts/prepare_data.py` and `scripts/verify_notebooks.py`. The revision snapshot has separate drivers and retains cluster data/result paths; see its README before attempting full reruns. Source parsing and file-hash checks have been completed for the revision snapshot, but a clean-environment, end-to-end rerun has not been claimed.
 
-1. `notebooks/01_cartesian_knee.ipynb` — §4.1, Fig. 2 — linear CG-SENSE on
-   retrospectively undersampled Cartesian knee data (R = 2), validated
-   against the closed-form analytical SENSE reference.
+## Data and code
 
-   ![Cartesian knee convergence (PICO vs PMR)](notebooks/assets/compressed/cartesian_knee_convergence_small.gif)
+Representative example bundles are retained under `experiments/`. Full multi-subject data are not redistributed.
 
-   *(full-size animation: [`notebooks/assets/cartesian_knee_convergence.gif`](notebooks/assets/cartesian_knee_convergence.gif))*
+- Cartesian knee: [mridata.org](https://mridata.org/).
+- CS knee: [fastMRI](https://fastmri.med.nyu.edu/); the revised experiments load JSENSE maps from a separately processed Meddlr bundle, rather than from the primary fastMRI download.
+- In vivo spiral brain: acquisition reported in [McCready et al., ISMRM 2025 abstract 3184](https://archive.ismrm.org/2025/3184_PB65iyQOS.html).
 
-2. `notebooks/02_noncartesian_spiral.ipynb` — §4.2, Figs. 3–4 —
-   Tikhonov-regularized CG-SENSE on non-Cartesian spiral brain phantom
-   data (R = 2), validated against a high-replica PMR surrogate reference
-   (N = 30 000, convergence certified per Appendix D).
-
-   ![Non-Cartesian phantom convergence (PICO vs PMR)](notebooks/assets/compressed/noncartesian_phantom_convergence_small.gif)
-
-   *(full-size animation: [`notebooks/assets/noncartesian_phantom_convergence.gif`](notebooks/assets/noncartesian_phantom_convergence.gif))*
-
-3. `notebooks/03_compressed_sensing.ipynb` — §4.3, Fig. 6 — TV-regularized
-   compressed-sensing reconstruction on retrospectively undersampled
-   fastMRI knee data (R = 2), validated against a method-specific high-sample
-   gold reference (N = 10 000 for both PICO and PMR, Appendix D) via the
-   Jacobian extension of PICO.
-
-To regenerate the single-slice data bundles from the raw HDF5 sources:
-
-```bash
-python scripts/prepare_data.py
-```
-
-To verify all three notebooks reproduce the paper's numerical results
-end-to-end:
-
-```bash
-python scripts/verify_notebooks.py
-# or
-pytest scripts/
-```
-
-Each notebook's final "Verification checkpoint" cell ```assert```s against
-the numeric targets in manuscript Table and Figure captions (single-slice
-tolerances widened relative to multi-subject averages, per the spec in
-`AGENTS.md` / the companion task document).
-
-## Data
-
-The full multi-subject datasets used in the manuscript are large and not
-redistributed here; each notebook ships with a single representative slice
-(≈ 6–24 MB) sufficient to reproduce the qualitative convergence behavior of
-PICO vs PMR. Sources are cited per §3.1 of the manuscript:
-
-- Cartesian knee — Stanford knee corpus on [mridata.org](https://mridata.org/)
-  (Epperson 2013); slice 120 of subject
-  `efa383b6-9446-438a-9901-1fe951653dbd`.
-- Non-Cartesian phantom — GE 3T Ultra High Performance spiral acquisition
-  of a physical brain phantom; single slice.
-- Compressed sensing — [fastMRI knee corpus](https://fastmri.med.nyu.edu/)
-  (Zbontar 2018); slice 17 of subject `file1000000`.
-
-To reproduce the full multi-subject statistics reported in Tables and Figures
-of the manuscript, download the source datasets and use the existing
-`scripts/run_N_comparison.py` and `scripts/plot_nonlinear_final_comparison.py`
-entry points together with the SLURM templates under `slurm_scripts/`.
-
-## Core API (`src/mr_recon/gfactor.py`)
-
-- `gfactor_SENSE_diag(...)` — PICO for linear reconstructions (§2.2).
-- `gfactor_SENSE_PMR(...)` — PMR baseline (§2.1).
-- `diagonal_estimator(...)` — lower-level stochastic diagonal estimator
-  (Eq. (13)).
-- `incremental_diagonal_estimator(...)` — shared-probe version for
-  monotonic convergence plots.
-- `incremental_calc_variance_PMR(...)` — shared-replica version for
-  matched comparisons.
-- `gfactor_sense(mps, Rx, Ry, l2_reg)` — closed-form analytical SENSE
-  g-factor used as the Cartesian reference.
-
-The Jacobian-based PICO variant for nonlinear reconstructions (§2.2.5) is
-implemented inline in `notebooks/03_compressed_sensing.ipynb` via
-`torch.func.jvp`; it follows the same estimator as Eq. (13) with
-$\mathbf{u}^{(i)} = \mathbf{J}_f(\mathbf{k}_0)\,\mathbf{v}^{(i)}$.
+The toolbox builds on [mr_recon](https://github.com/danielabrahamgit/mr_recon). The revision directory preserves the source checkout's license and provenance. The Git base listed in the snapshot manifest is distinct from this repository's snapshot commit.
 
 ## Citation
 
-PICO is built on top of the `mr_recon` library.
+Dalmaz O, Abraham DR, Toews AR, Chaudhari AS, Setsompop K, Hargreaves BA. *Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions*. Manuscript MRM-26-26969.
 
-```bibtex
-@inproceedings{Onat2026Sedona,
-  author={Onat Dalmaz and Daniel R. Abraham and Alexander R. Toews and Akshay S. Chaudhari and  Kawin Setsompop and Brian A. Hargreaves},
-  title = {Fast {SNR} and g-factor mapping for image-based iterative reconstructions},
-  booktitle = {Proceedings of the ISMRM Workshop on Data Sampling and Reconstruction},
-  year      = {2026},
-  address   = {Sedona, USA},
-}
-```
+Earlier workshop presentation: Dalmaz et al., *Fast SNR and g-factor mapping for image-based iterative reconstructions*, ISMRM Workshop on Data Sampling and Reconstruction, Sedona, 2026.
 
-## Acknowledgements
-This code uses libraries from [mr_recon](https://github.com/danielabrahamgit/mr_recon) library.

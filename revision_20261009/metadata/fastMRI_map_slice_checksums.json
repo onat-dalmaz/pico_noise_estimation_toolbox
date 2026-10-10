@@ -1,0 +1,477 @@
+{
+  "verified_utc_date": "2026-10-09",
+  "source_root": "/dataNAS/people/onat/mr_recon",
+  "manifest_path": "/dataNAS/people/onat/mr_recon/scripts/cs_cohort_timing_manifest_20260930.csv",
+  "manifest_sha256": "209d6700ce110d004d39a81c991ae65e6d1c498d0b86a82bbb0446c9a52bc208",
+  "checksum_convention": "SHA256 of the retained slice array bytes in C order, complex64 as stored; not a whole-HDF5-file checksum. No MRI/map arrays or participant identifiers exported.",
+  "records": [
+    {
+      "file": "experiments/fastmri_knee/data/file1000000.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "eb7644964ecd4138db3db8bf3640cc4b7f8e8ba57467a1944afb7ce53c8c56b8"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000000.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "58b58e702c76f793eb7615d2a07a46d6c6ba9d79732607bee88b75821e5816c6"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000000.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "adafb68e2e7eb6b4b955280f227f638fe1c9b6deffc198ee852c54d2b013abce"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000007.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "671c93e98119461463e6f456f963c33641c5ebdf253ace036d3551f1b3c29dca"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000007.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "4c99d5a18047ce0f19dc21a89e7475c9870dc6bc6af4746a6faa658ec30da488"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000007.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "cd5ab94c959316ff9c6de34166aa1675bd6435ea6512b82bc432ea9524342a3a"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000017.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "c369297b5c656e413559ac5a057e78d5a906f19a1a9799bc7b1b6de28bbb703d"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000017.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "3fec1f2ee2ba416e011c72cab6bc1fc5a6fe31c159e973540f0916d135ee8998"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000017.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "c24db4cc5b2a1a0d72365625904f9a531de82cdb855f0ac52098ff218b793454"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000026.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "0eedaf4325c2e4a5514a60a80ca12d5c3e2667228ffd95bb279dd39d72606473"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000026.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "b729b9ef458b06445bae44d00894ddc7f957de7bea3c5c35ed53c089cfd07329"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000026.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "320332190b0a50a0961fe88edf9c7b9f00335c3d9f96970aa99c7017006c9939"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000031.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "06039a9231cba6c2500b8b7c94104491e54e517c5cf6994dc4daf4e6190e474a"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000031.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "a29e59c3b8b81b28f720598d352cefa98878f13a4cdb0680e7ee389fad442fc4"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000031.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "ca61fcb9a1fc39a92e2ac2825135f80f3502c9bf09cdb81500047c561820b973"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000033.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "d25e47e2481a44535e09715540fc32fcdf5d73cd50071e63ba08857f0d212c0b"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000033.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "0d7838eedc2fb1451c6fa40046a895efe4b80b2e5d748efdc11ce773dc92086e"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000033.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "be078cebdbac3f47affa02d96665bf010044cdd06462c634afa68b5cd92a50f8"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000041.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "25a1d4319e534abddde3a108b631278f7b9ada761fb02939926445e1b515799f"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000041.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "77ba76a75d539d5a89cf06d4c939c71d818c036d631f16e7afc796abc657b10b"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000041.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "97159a573a193ac0c729d51d2b97d4f5fd4ad1c5634ed0bc4379df572c36ed87"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000052.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "72aaffc11a628020c1c4e64353f1353fbcdb90855bfa6814271a84704566a655"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000052.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "3a91bd794632287ce80185144808736c385ee65ad9a1172b994dcd1e9027677e"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000052.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "71c5c0c1218d47b5100f7d47d2627f8a6c4f6729450d5a9b7f44e9ceecfb77b9"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000071.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "c2eaa7a6a65a0bbca3ab10ddf7ef5320d868a05021cc7d63dd624cbff4d2e73f"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000071.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "c2ba835c4eb98dec22f11db6ec4850f1a8c1d910c89d59e57a069030fd411187"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000071.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "e056c339e6ae1b05c1a671576041538b83745f052afedcb3c1472c298aff4aef"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000073.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "07528fb18627c07ee3a8a76d6dc90723c38ef8e9bdcc3e263471a6ee7662818c"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000073.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "e31fbdaf3345c35306e95ab6e1d390b46264d9330e1deeebe43146ced77f7113"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000073.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "4bfb6948cfe6782a6ddec955069bcff7f3c5ef085775d555bc88891044750ad8"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000107.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "b609144e6dde351c23a5ff7300cef17cae6548d60c5ffed73ad7a2b60b7db21b"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000107.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "810cd145a101fceb70219e619b9d67bdc0e9fb88f801d7bb6934ae9114e2e999"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000107.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "4fb922964a7bc0c084eb799c571224ff50f55a0dd82256fed099cfc4d6090c29"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000108.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 13,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "93ad4fb022a6060eb9b64b1b3ec4e9e1205bfae29bce1c20b6eb3b2823c74e1a"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000108.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 17,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "f26d7eefb0198559948576d392835f416fb974418165eeffed34f4891e087024"
+    },
+    {
+      "file": "experiments/fastmri_knee/data/file1000108.h5",
+      "dataset": "jsense-12-cf=4/maps",
+      "slice_idx": 21,
+      "map_set_idx": 0,
+      "shape": [
+        320,
+        320,
+        15
+      ],
+      "dtype": "complex64",
+      "array_content_sha256": "35b86f8a6c0f500b20a82248524c6e815d366ad3c64ee0cf4516e2a05e777f21"
+    }
+  ]
+}

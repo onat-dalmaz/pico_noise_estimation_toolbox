@@ -1,0 +1,387 @@
+{
+  "accepted": true,
+  "arms": {
+    "R2": {
+      "lambda_normalized": 0.0010000001027339312,
+      "max_eigen": 163.37998321533203,
+      "stability_passed": true
+    },
+    "R3": {
+      "lambda_normalized": 0.0015000978611440722,
+      "max_eigen": 108.91289443969727,
+      "stability_passed": true
+    },
+    "R4": {
+      "lambda_normalized": 0.001999719900642496,
+      "max_eigen": 81.70144226074218,
+      "stability_passed": true
+    },
+    "reference": {
+      "lambda_normalized": 0.0005000027711850419,
+      "max_eigen": 326.7581889851888,
+      "stability_passed": true
+    }
+  },
+  "created_unix": 1788741177.5064,
+  "lambda_physical": 0.16338,
+  "normalization": "lambda_normalized=lambda_physical/max_eigen",
+  "operator": "unweighted pre-whitened A^H A",
+  "protocol": {
+    "arguments": {
+      "N_max": 10000,
+      "R": 2,
+      "checkpoint_every": 500,
+      "manifest": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/operator_manifest.json",
+      "method": null,
+      "mode": "gate",
+      "out_root": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338",
+      "seed": 20260730,
+      "stability_probes": 16
+    },
+    "audit_sources": [
+      "reports/NONCART_VALIDITY_AUDIT.md",
+      "reports/NONCART_FINAL_DOC_NUMBERS.md"
+    ],
+    "covariance_apply": "Sigma v = M^-2 (A^H A v): first certified solve on the range(A^H A) right-hand side; second certified solve warm-started from the Galerkin projection onto the first solve's Krylov space (stored CG directions); both solves stop on the recomputed true residual",
+    "dcf_data_weighting": false,
+    "dcf_warm_start": false,
+    "host": "milano",
+    "initialization": "zero initialization for every PMR/factor solve and for the first direct-covariance solve; the second direct-covariance solve is warm-started from the first solve's Krylov space and certified on the same true residual",
+    "lambda_physical": 0.16338,
+    "linear_operator_input": "noise only; no signal added",
+    "maps": "full resolution and unmasked",
+    "mask_B": "|x_ref| > 0.05 max(|x_ref|)",
+    "mask_C": "largest 8-connected B component; fill holes; erode 3x3 once",
+    "max_iterations": 1200,
+    "operator": "unweighted pre-whitened A^H A",
+    "pmr_moment_accumulation": "float64",
+    "preconditioner": null,
+    "primary_outputs": "absolute variance and SD in physical image units",
+    "probe_second_moment": "E|z_j|^2=1",
+    "secondary_output": "regularized relative-noise ratio",
+    "slurm_array_task_id": null,
+    "slurm_job_id": "62670",
+    "stopping": "true ||rhs-Hx||_2/||rhs||_2",
+    "true_residual_recompute_every": 10,
+    "true_residual_tolerance": 1e-05
+  },
+  "reference_eigen_relative_spread": 6.288596066217767e-08,
+  "slurm_job_id": "62670",
+  "source_records": [
+    {
+      "R": 2,
+      "accelerated_passed": true,
+      "arguments": {
+        "N_max": 10000,
+        "R": 2,
+        "checkpoint_every": 500,
+        "manifest": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/operator_manifest.json",
+        "method": null,
+        "mode": "stability",
+        "out_root": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338",
+        "seed": 20260740,
+        "stability_probes": 16
+      },
+      "audit_sources": [
+        "reports/NONCART_VALIDITY_AUDIT.md",
+        "reports/NONCART_FINAL_DOC_NUMBERS.md"
+      ],
+      "covariance_apply": "Sigma v = M^-2 (A^H A v): first certified solve on the range(A^H A) right-hand side; second certified solve warm-started from the Galerkin projection onto the first solve's Krylov space (stored CG directions); both solves stop on the recomputed true residual",
+      "dcf_data_weighting": false,
+      "dcf_warm_start": false,
+      "decision": {
+        "checkpoint_decisions": [
+          {
+            "iteration": 25,
+            "passed": false
+          },
+          {
+            "iteration": 50,
+            "passed": false
+          },
+          {
+            "iteration": 100,
+            "passed": false
+          },
+          {
+            "iteration": 200,
+            "passed": true
+          },
+          {
+            "iteration": 400,
+            "passed": true
+          },
+          {
+            "iteration": 800,
+            "passed": true
+          },
+          {
+            "iteration": 1200,
+            "passed": true
+          }
+        ],
+        "first_stable_iteration": 200,
+        "gates": {
+          "objective_relative_change": "<=1e-5",
+          "regularized_ratio_relative_change_mask_B": "<=2e-2",
+          "solution_relative_change": "<=1e-3",
+          "true_relative_normal_residual": "<=1e-5"
+        },
+        "passed": true
+      },
+      "host": "amalfi",
+      "initialization": "zero initialization for every PMR/factor solve and for the first direct-covariance solve; the second direct-covariance solve is warm-started from the first solve's Krylov space and certified on the same true residual",
+      "lambda_normalized_acc": 0.0010000001027339312,
+      "lambda_normalized_ref": 0.0005000027869066196,
+      "lambda_physical": 0.16338,
+      "linear_operator_input": "noise only; no signal added",
+      "maps": "full resolution and unmasked",
+      "mask_B": "|x_ref| > 0.05 max(|x_ref|)",
+      "mask_C": "largest 8-connected B component; fill holes; erode 3x3 once",
+      "mask_metadata": {
+        "A_current_percentile": {
+          "pixel_count": 1210,
+          "rule": "|x_ref| > percentile_97.5(|x_ref| over positive pixels)",
+          "threshold": 763.1209228515627
+        },
+        "B_support_5pct": {
+          "pixel_count": 18040,
+          "rule": "|x_ref| > 0.05 * max(|x_ref|)",
+          "threshold": 100.84996337890625
+        },
+        "C_lcc_fill_erode1": {
+          "components_before_selection": 6,
+          "connectivity": 8,
+          "erosion_iterations": 1,
+          "pixel_count": 16449,
+          "rule": "largest 8-connected component of B; fill holes; one 3x3 binary erosion"
+        }
+      },
+      "max_eigen_acc": 163.37998321533203,
+      "max_eigen_ref": 326.7581787109375,
+      "max_iterations": 1200,
+      "operator": "unweighted pre-whitened A^H A",
+      "pmr_moment_accumulation": "float64",
+      "preconditioner": null,
+      "primary_outputs": "absolute variance and SD in physical image units",
+      "probe_second_moment": "E|z_j|^2=1",
+      "reference_passed": true,
+      "secondary_output": "regularized relative-noise ratio",
+      "slurm_array_task_id": "0",
+      "slurm_job_id": "62668",
+      "stopping": "true ||rhs-Hx||_2/||rhs||_2",
+      "true_residual_recompute_every": 10,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "R": 3,
+      "accelerated_passed": true,
+      "arguments": {
+        "N_max": 10000,
+        "R": 3,
+        "checkpoint_every": 500,
+        "manifest": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/operator_manifest.json",
+        "method": null,
+        "mode": "stability",
+        "out_root": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338",
+        "seed": 20260740,
+        "stability_probes": 16
+      },
+      "audit_sources": [
+        "reports/NONCART_VALIDITY_AUDIT.md",
+        "reports/NONCART_FINAL_DOC_NUMBERS.md"
+      ],
+      "covariance_apply": "Sigma v = M^-2 (A^H A v): first certified solve on the range(A^H A) right-hand side; second certified solve warm-started from the Galerkin projection onto the first solve's Krylov space (stored CG directions); both solves stop on the recomputed true residual",
+      "dcf_data_weighting": false,
+      "dcf_warm_start": false,
+      "decision": {
+        "checkpoint_decisions": [
+          {
+            "iteration": 25,
+            "passed": false
+          },
+          {
+            "iteration": 50,
+            "passed": false
+          },
+          {
+            "iteration": 100,
+            "passed": false
+          },
+          {
+            "iteration": 200,
+            "passed": true
+          },
+          {
+            "iteration": 400,
+            "passed": true
+          },
+          {
+            "iteration": 800,
+            "passed": true
+          },
+          {
+            "iteration": 1200,
+            "passed": true
+          }
+        ],
+        "first_stable_iteration": 200,
+        "gates": {
+          "objective_relative_change": "<=1e-5",
+          "regularized_ratio_relative_change_mask_B": "<=2e-2",
+          "solution_relative_change": "<=1e-3",
+          "true_relative_normal_residual": "<=1e-5"
+        },
+        "passed": true
+      },
+      "host": "amalfi",
+      "initialization": "zero initialization for every PMR/factor solve and for the first direct-covariance solve; the second direct-covariance solve is warm-started from the first solve's Krylov space and certified on the same true residual",
+      "lambda_normalized_acc": 0.0015000978611440722,
+      "lambda_normalized_ref": 0.0005000027869066196,
+      "lambda_physical": 0.16338,
+      "linear_operator_input": "noise only; no signal added",
+      "maps": "full resolution and unmasked",
+      "mask_B": "|x_ref| > 0.05 max(|x_ref|)",
+      "mask_C": "largest 8-connected B component; fill holes; erode 3x3 once",
+      "mask_metadata": {
+        "A_current_percentile": {
+          "pixel_count": 1210,
+          "rule": "|x_ref| > percentile_97.5(|x_ref| over positive pixels)",
+          "threshold": 763.1209228515627
+        },
+        "B_support_5pct": {
+          "pixel_count": 18040,
+          "rule": "|x_ref| > 0.05 * max(|x_ref|)",
+          "threshold": 100.84996337890625
+        },
+        "C_lcc_fill_erode1": {
+          "components_before_selection": 6,
+          "connectivity": 8,
+          "erosion_iterations": 1,
+          "pixel_count": 16449,
+          "rule": "largest 8-connected component of B; fill holes; one 3x3 binary erosion"
+        }
+      },
+      "max_eigen_acc": 108.91289443969727,
+      "max_eigen_ref": 326.7581787109375,
+      "max_iterations": 1200,
+      "operator": "unweighted pre-whitened A^H A",
+      "pmr_moment_accumulation": "float64",
+      "preconditioner": null,
+      "primary_outputs": "absolute variance and SD in physical image units",
+      "probe_second_moment": "E|z_j|^2=1",
+      "reference_passed": true,
+      "secondary_output": "regularized relative-noise ratio",
+      "slurm_array_task_id": "1",
+      "slurm_job_id": "62669",
+      "stopping": "true ||rhs-Hx||_2/||rhs||_2",
+      "true_residual_recompute_every": 10,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "R": 4,
+      "accelerated_passed": true,
+      "arguments": {
+        "N_max": 10000,
+        "R": 4,
+        "checkpoint_every": 500,
+        "manifest": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/operator_manifest.json",
+        "method": null,
+        "mode": "stability",
+        "out_root": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338",
+        "seed": 20260740,
+        "stability_probes": 16
+      },
+      "audit_sources": [
+        "reports/NONCART_VALIDITY_AUDIT.md",
+        "reports/NONCART_FINAL_DOC_NUMBERS.md"
+      ],
+      "covariance_apply": "Sigma v = M^-2 (A^H A v): first certified solve on the range(A^H A) right-hand side; second certified solve warm-started from the Galerkin projection onto the first solve's Krylov space (stored CG directions); both solves stop on the recomputed true residual",
+      "dcf_data_weighting": false,
+      "dcf_warm_start": false,
+      "decision": {
+        "checkpoint_decisions": [
+          {
+            "iteration": 25,
+            "passed": false
+          },
+          {
+            "iteration": 50,
+            "passed": false
+          },
+          {
+            "iteration": 100,
+            "passed": false
+          },
+          {
+            "iteration": 200,
+            "passed": true
+          },
+          {
+            "iteration": 400,
+            "passed": true
+          },
+          {
+            "iteration": 800,
+            "passed": true
+          },
+          {
+            "iteration": 1200,
+            "passed": true
+          }
+        ],
+        "first_stable_iteration": 200,
+        "gates": {
+          "objective_relative_change": "<=1e-5",
+          "regularized_ratio_relative_change_mask_B": "<=2e-2",
+          "solution_relative_change": "<=1e-3",
+          "true_relative_normal_residual": "<=1e-5"
+        },
+        "passed": true
+      },
+      "host": "amalfi",
+      "initialization": "zero initialization for every PMR/factor solve and for the first direct-covariance solve; the second direct-covariance solve is warm-started from the first solve's Krylov space and certified on the same true residual",
+      "lambda_normalized_acc": 0.001999719900642496,
+      "lambda_normalized_ref": 0.0005000027397418892,
+      "lambda_physical": 0.16338,
+      "linear_operator_input": "noise only; no signal added",
+      "maps": "full resolution and unmasked",
+      "mask_B": "|x_ref| > 0.05 max(|x_ref|)",
+      "mask_C": "largest 8-connected B component; fill holes; erode 3x3 once",
+      "mask_metadata": {
+        "A_current_percentile": {
+          "pixel_count": 1210,
+          "rule": "|x_ref| > percentile_97.5(|x_ref| over positive pixels)",
+          "threshold": 763.1209228515627
+        },
+        "B_support_5pct": {
+          "pixel_count": 18040,
+          "rule": "|x_ref| > 0.05 * max(|x_ref|)",
+          "threshold": 100.84996337890625
+        },
+        "C_lcc_fill_erode1": {
+          "components_before_selection": 6,
+          "connectivity": 8,
+          "erosion_iterations": 1,
+          "pixel_count": 16449,
+          "rule": "largest 8-connected component of B; fill holes; one 3x3 binary erosion"
+        }
+      },
+      "max_eigen_acc": 81.70144226074218,
+      "max_eigen_ref": 326.7582095336914,
+      "max_iterations": 1200,
+      "operator": "unweighted pre-whitened A^H A",
+      "pmr_moment_accumulation": "float64",
+      "preconditioner": null,
+      "primary_outputs": "absolute variance and SD in physical image units",
+      "probe_second_moment": "E|z_j|^2=1",
+      "reference_passed": true,
+      "secondary_output": "regularized relative-noise ratio",
+      "slurm_array_task_id": "2",
+      "slurm_job_id": "62667",
+      "stopping": "true ||rhs-Hx||_2/||rhs||_2",
+      "true_residual_recompute_every": 10,
+      "true_residual_tolerance": 1e-05
+    }
+  ]
+}

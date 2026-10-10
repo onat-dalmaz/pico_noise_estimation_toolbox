@@ -1,0 +1,107 @@
+{
+  "R2": {
+    "per_seed": {
+      "20260732": {
+        "c_pmr": 0.5073036732863078,
+        "c_pico": 0.1275512867598535,
+        "ratio": 3.977252493276928,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/matched/R2/seed20260732"
+      },
+      "20260901": {
+        "c_pmr": 0.5400343086937328,
+        "c_pico": 0.13448501416769829,
+        "ratio": 4.015572382067256,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/seedrepcoupled_lam0.16338_R2/matched_incremental/R2/seed20260901"
+      },
+      "20260902": {
+        "c_pmr": 0.5346355544335141,
+        "c_pico": 0.13446142243081968,
+        "ratio": 3.976125975527172,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/seedrepcoupled_lam0.16338_R2/matched_incremental/R2/seed20260902"
+      }
+    },
+    "summary": {
+      "seeds_used": [
+        "20260732",
+        "20260901",
+        "20260902"
+      ],
+      "ratio_mean": 3.989650283623785,
+      "ratio_sd": 0.02245626084959064,
+      "ratio_min": 3.976125975527172,
+      "ratio_max": 4.015572382067256,
+      "c_pmr_mean": 0.5273245121378515,
+      "c_pico_mean": 0.13216590778612383
+    }
+  },
+  "R3": {
+    "per_seed": {
+      "20260732": {
+        "c_pmr": 0.5906371500212922,
+        "c_pico": 0.19026477804411535,
+        "ratio": 3.1042905370764178,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/matched/R3/seed20260732"
+      },
+      "20260901": {
+        "c_pmr": 0.6306552759268437,
+        "c_pico": 0.2031911390441777,
+        "ratio": 3.103753829490207,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/seedrepcoupled_lam0.16338_R3/matched_incremental/R3/seed20260901"
+      },
+      "20260902": {
+        "c_pmr": 0.632493116962903,
+        "c_pico": 0.20104845461582818,
+        "ratio": 3.1459735324576226,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/seedrepcoupled_lam0.16338_R3/matched_incremental/R3/seed20260902"
+      }
+    },
+    "summary": {
+      "seeds_used": [
+        "20260732",
+        "20260901",
+        "20260902"
+      ],
+      "ratio_mean": 3.118005966341416,
+      "ratio_sd": 0.02422210931373594,
+      "ratio_min": 3.103753829490207,
+      "ratio_max": 3.1459735324576226,
+      "c_pmr_mean": 0.6179285143036797,
+      "c_pico_mean": 0.19816812390137375
+    }
+  },
+  "R4": {
+    "per_seed": {
+      "20260732": {
+        "c_pmr": 0.6275934988642958,
+        "c_pico": 0.21225375328815552,
+        "ratio": 2.956807543526806,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/matched/R4/seed20260732"
+      },
+      "20260901": {
+        "c_pmr": 0.6668176874215396,
+        "c_pico": 0.22498366359080194,
+        "ratio": 2.963849360344407,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/seedrepcoupled_lam0.16338_R4/matched_incremental/R4/seed20260901"
+      },
+      "20260902": {
+        "c_pmr": 0.6700839882751648,
+        "c_pico": 0.22422020502775855,
+        "ratio": 2.9885084985637587,
+        "source": "/dataNAS/people/onat/mr_recon/experiments/noncartesian_phantom/results/seedrepcoupled_lam0.16338_R4/matched_incremental/R4/seed20260902"
+      }
+    },
+    "summary": {
+      "seeds_used": [
+        "20260732",
+        "20260901",
+        "20260902"
+      ],
+      "ratio_mean": 2.9697218008116573,
+      "ratio_sd": 0.01664637514129638,
+      "ratio_min": 2.956807543526806,
+      "ratio_max": 2.9885084985637587,
+      "c_pmr_mean": 0.6548317248536667,
+      "c_pico_mean": 0.22048587396890532
+    }
+  }
+}

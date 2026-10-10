@@ -1,0 +1,749 @@
+{
+  "primary_scripts": [
+    "scripts/cartesian_converged_target_audit.py",
+    "scripts/run_noncart_final_grid.py",
+    "scripts/noncart_final_grid_core.py",
+    "scripts/noncart_audit_core.py",
+    "scripts/run_noncart_lambda_selection.py",
+    "scripts/noncart_truncated_cg_comparison.py",
+    "scripts/run_brain_noncart.py",
+    "scripts/pool_brain_reference.py",
+    "scripts/brain_batch_reference_20260930.py",
+    "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+    "scripts/cs_pico_linearize_pilot_20261007.py",
+    "scripts/run_cs_cohort_timing_20260930.py",
+    "scripts/audit_cs_cohort_timing_rtx8000_20261007.py",
+    "scripts/nonlinear_cs_noise_sweep.py",
+    "scripts/cs_batched_timing.py",
+    "scripts/run_tv_sweep_matched_3000.py",
+    "scripts/tv_lambda_select_converged.py",
+    "scripts/tv_recon_fidelity.py"
+  ],
+  "dependency_edges": [
+    {
+      "from": "scripts/tv_recon_fidelity.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/tv_recon_fidelity.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/tv_recon_fidelity.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/tv_recon_fidelity.py",
+      "module": "mr_recon.prox",
+      "resolved": "src/mr_recon/prox.py"
+    },
+    {
+      "from": "scripts/tv_recon_fidelity.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/tv_recon_fidelity.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "src/mr_recon/utils.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "src/mr_recon/prox.py",
+      "module": "mr_recon.block",
+      "resolved": "src/mr_recon/block.py"
+    },
+    {
+      "from": "src/mr_recon/prox.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "src/mr_recon/block.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.pad",
+      "resolved": "src/mr_recon/pad.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.imperfections.imperfection",
+      "resolved": "src/mr_recon/imperfections/imperfection.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.multi_coil.grappa_est",
+      "resolved": "src/mr_recon/multi_coil/grappa_est.py"
+    },
+    {
+      "from": "src/mr_recon/linops.py",
+      "module": "mr_recon.indexing",
+      "resolved": "src/mr_recon/indexing.py"
+    },
+    {
+      "from": "src/mr_recon/multi_coil/grappa_est.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "src/mr_recon/multi_coil/grappa_est.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "src/mr_recon/multi_coil/grappa_est.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "src/mr_recon/multi_coil/grappa_est.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "src/mr_recon/algs.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "src/mr_recon/algs.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "src/mr_recon/fourier.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "src/mr_recon/fourier.py",
+      "module": "mr_recon.pad",
+      "resolved": "src/mr_recon/pad.py"
+    },
+    {
+      "from": "src/mr_recon/fourier.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "src/mr_recon/fourier.py",
+      "module": "mr_recon.indexing",
+      "resolved": "src/mr_recon/indexing.py"
+    },
+    {
+      "from": "src/mr_recon/fourier.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/tv_lambda_select_converged.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/tv_lambda_select_converged.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/tv_lambda_select_converged.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/tv_lambda_select_converged.py",
+      "module": "mr_recon.prox",
+      "resolved": "src/mr_recon/prox.py"
+    },
+    {
+      "from": "scripts/tv_lambda_select_converged.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/tv_lambda_select_converged.py",
+      "module": "tv_recon_fidelity",
+      "resolved": "scripts/tv_recon_fidelity.py"
+    },
+    {
+      "from": "scripts/tv_lambda_select_converged.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/run_tv_sweep_matched_3000.py",
+      "module": "run_lambda_tv_sweep",
+      "resolved": "scripts/run_lambda_tv_sweep.py"
+    },
+    {
+      "from": "scripts/run_tv_sweep_matched_3000.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/run_tv_sweep_matched_3000.py",
+      "module": "cs_batched_timing",
+      "resolved": "scripts/cs_batched_timing.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "cs_recheck_pico_pmr",
+      "resolved": "scripts/cs_recheck_pico_pmr.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.indexing",
+      "resolved": "src/mr_recon/indexing.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.indexing",
+      "resolved": "src/mr_recon/indexing.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.indexing",
+      "resolved": "src/mr_recon/indexing.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/cs_batched_timing.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "mr_recon.prox",
+      "resolved": "src/mr_recon/prox.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "mr_recon.pmr_variance",
+      "resolved": "src/mr_recon/pmr_variance.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "nonlinear_cs_N_comparison",
+      "resolved": "scripts/nonlinear_cs_N_comparison.py"
+    },
+    {
+      "from": "scripts/cs_recheck_pico_pmr.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "mr_recon.prox",
+      "resolved": "src/mr_recon/prox.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "nonlinear_cs_N_comparison",
+      "resolved": "scripts/nonlinear_cs_N_comparison.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_N_comparison.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "mr_recon.prox",
+      "resolved": "src/mr_recon/prox.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "nonlinear_cs_N_comparison",
+      "resolved": "scripts/nonlinear_cs_N_comparison.py"
+    },
+    {
+      "from": "scripts/nonlinear_cs_noise_sweep.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "mr_recon.prox",
+      "resolved": "src/mr_recon/prox.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "nonlinear_cs_N_comparison",
+      "resolved": "scripts/nonlinear_cs_N_comparison.py"
+    },
+    {
+      "from": "scripts/run_lambda_tv_sweep.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "mr_recon.prox",
+      "resolved": "src/mr_recon/prox.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "mr_recon.pmr_variance",
+      "resolved": "src/mr_recon/pmr_variance.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "nonlinear_cs_N_comparison",
+      "resolved": "scripts/nonlinear_cs_N_comparison.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_20260930.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/cs_pico_linearize_pilot_20261007.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/cs_pico_linearize_pilot_20261007.py",
+      "module": "run_cs_cohort_timing_20260930",
+      "resolved": "scripts/run_cs_cohort_timing_20260930.py"
+    },
+    {
+      "from": "scripts/cs_pico_linearize_pilot_20261007.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/cs_pico_linearize_pilot_20261007.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/cs_pico_linearize_pilot_20261007.py",
+      "module": "cs_batched_timing",
+      "resolved": "scripts/cs_batched_timing.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "nonlinear_cs_noise_sweep",
+      "resolved": "scripts/nonlinear_cs_noise_sweep.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "run_cs_cohort_timing_20260930",
+      "resolved": "scripts/run_cs_cohort_timing_20260930.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "cs_pico_linearize_pilot_20261007",
+      "resolved": "scripts/cs_pico_linearize_pilot_20261007.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "mr_recon.algs",
+      "resolved": "src/mr_recon/algs.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "mr_recon.prox_complex_tv",
+      "resolved": "src/mr_recon/prox_complex_tv.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "cs_batched_timing",
+      "resolved": "scripts/cs_batched_timing.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "mr_recon.indexing",
+      "resolved": "src/mr_recon/indexing.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/brain_batch_reference_20260930.py",
+      "module": "scripts.run_brain_noncart",
+      "resolved": "scripts/run_brain_noncart.py"
+    },
+    {
+      "from": "scripts/brain_batch_reference_20260930.py",
+      "module": "scripts.noncart_audit_core",
+      "resolved": "scripts/noncart_audit_core.py"
+    },
+    {
+      "from": "scripts/brain_batch_reference_20260930.py",
+      "module": "mr_recon.pad",
+      "resolved": "src/mr_recon/pad.py"
+    },
+    {
+      "from": "scripts/brain_batch_reference_20260930.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/run_brain_noncart.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "scripts/run_brain_noncart.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/run_brain_noncart.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/run_brain_noncart.py",
+      "module": "scripts.run_noncart_weekend_audit",
+      "resolved": "scripts/run_noncart_weekend_audit.py"
+    },
+    {
+      "from": "scripts/run_brain_noncart.py",
+      "module": "scripts.noncart_audit_core",
+      "resolved": "scripts/noncart_audit_core.py"
+    },
+    {
+      "from": "scripts/run_noncart_weekend_audit.py",
+      "module": "mr_recon.covariance_apply",
+      "resolved": "src/mr_recon/covariance_apply.py"
+    },
+    {
+      "from": "scripts/run_noncart_weekend_audit.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "scripts/run_noncart_weekend_audit.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/run_noncart_weekend_audit.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/run_noncart_weekend_audit.py",
+      "module": "noncart_audit_core",
+      "resolved": "scripts/noncart_audit_core.py"
+    },
+    {
+      "from": "scripts/run_noncart_weekend_audit.py",
+      "module": "scripts.noncart_audit_core",
+      "resolved": "scripts/noncart_audit_core.py"
+    },
+    {
+      "from": "scripts/noncart_truncated_cg_comparison.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "scripts/noncart_truncated_cg_comparison.py",
+      "module": "scripts.run_noncart_weekend_audit",
+      "resolved": "scripts/run_noncart_weekend_audit.py"
+    },
+    {
+      "from": "scripts/run_noncart_lambda_selection.py",
+      "module": "run_noncart_weekend_audit",
+      "resolved": "scripts/run_noncart_weekend_audit.py"
+    },
+    {
+      "from": "scripts/run_noncart_lambda_selection.py",
+      "module": "noncart_audit_core",
+      "resolved": "scripts/noncart_audit_core.py"
+    },
+    {
+      "from": "scripts/run_noncart_lambda_selection.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "scripts/run_noncart_final_grid.py",
+      "module": "mr_recon.covariance_apply",
+      "resolved": "src/mr_recon/covariance_apply.py"
+    },
+    {
+      "from": "scripts/run_noncart_final_grid.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "scripts/run_noncart_final_grid.py",
+      "module": "scripts.audit_noncart_saved_maps",
+      "resolved": "scripts/audit_noncart_saved_maps.py"
+    },
+    {
+      "from": "scripts/run_noncart_final_grid.py",
+      "module": "scripts.factor_comparator_core",
+      "resolved": "scripts/factor_comparator_core.py"
+    },
+    {
+      "from": "scripts/run_noncart_final_grid.py",
+      "module": "scripts.noncart_audit_core",
+      "resolved": "scripts/noncart_audit_core.py"
+    },
+    {
+      "from": "scripts/run_noncart_final_grid.py",
+      "module": "scripts.noncart_final_grid_core",
+      "resolved": "scripts/noncart_final_grid_core.py"
+    },
+    {
+      "from": "scripts/run_noncart_final_grid.py",
+      "module": "scripts.run_noncart_weekend_audit",
+      "resolved": "scripts/run_noncart_weekend_audit.py"
+    },
+    {
+      "from": "scripts/factor_comparator_core.py",
+      "module": "mr_recon.covariance_apply",
+      "resolved": "src/mr_recon/covariance_apply.py"
+    },
+    {
+      "from": "scripts/cartesian_converged_target_audit.py",
+      "module": "mr_recon.dtypes",
+      "resolved": "src/mr_recon/dtypes.py"
+    },
+    {
+      "from": "scripts/cartesian_converged_target_audit.py",
+      "module": "mr_recon.fourier",
+      "resolved": "src/mr_recon/fourier.py"
+    },
+    {
+      "from": "scripts/cartesian_converged_target_audit.py",
+      "module": "mr_recon.gfactor",
+      "resolved": "src/mr_recon/gfactor.py"
+    },
+    {
+      "from": "scripts/cartesian_converged_target_audit.py",
+      "module": "mr_recon.linops",
+      "resolved": "src/mr_recon/linops.py"
+    },
+    {
+      "from": "scripts/cartesian_converged_target_audit.py",
+      "module": "mr_recon.utils",
+      "resolved": "src/mr_recon/utils.py"
+    }
+  ]
+}

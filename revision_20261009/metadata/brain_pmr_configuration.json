@@ -1,0 +1,92 @@
+{
+  "R": 2,
+  "device": "cuda:0",
+  "operator": "clean unweighted A^H A",
+  "covariance_apply": "Sigma v = M^-2 (A^H A v): first certified solve on the range(A^H A) right-hand side; second certified solve warm-started from the Galerkin projection onto the first solve's Krylov space (stored CG directions); both solves stop on the recomputed true residual",
+  "dcf_objective_weighting": false,
+  "dcf_warm_start": false,
+  "initialization": "zero",
+  "stopping": "recomputed ||rhs-Hx||_2/||rhs||_2",
+  "pmr_accumulation": "sum of |R(noise)|^2",
+  "noise_mode": "noise_only",
+  "sigma": 0.01,
+  "max_eigen_ref": 60.973579483032225,
+  "max_eigen_acc": 30.48650077819824,
+  "normalization_power_iterations": 60,
+  "systems": [
+    {
+      "max_eigen": 60.973579483032225,
+      "lambda_normalized": 0.001499985782531369,
+      "lambda_physical": 0.09145950233459473,
+      "max_iter": 1200,
+      "true_residual_rtol": 1e-05,
+      "true_residual_every": 10
+    },
+    {
+      "max_eigen": 30.48650077819824,
+      "lambda_normalized": 0.003,
+      "lambda_physical": 0.09145950233459473,
+      "max_iter": 1200,
+      "true_residual_rtol": 1e-05,
+      "true_residual_every": 10
+    }
+  ],
+  "arguments": {
+    "stage": "matched",
+    "R": 2,
+    "ref_lambda_norm": 0.0001,
+    "reference": "cg",
+    "rtol": 1e-05,
+    "out_dir": "experiments/brain_spiral/results_coupled",
+    "seed": 20260830,
+    "lambda_physical": 0.09145950233459473,
+    "lambda_normalized": 0.001,
+    "max_iter": 1200,
+    "true_residual_every": 10,
+    "N_max": 10000,
+    "checkpoints": [
+      50,
+      100,
+      200,
+      500,
+      1000,
+      2000,
+      5000,
+      10000
+    ],
+    "methods": [
+      "pmr"
+    ],
+    "pmr_sigma_scale": 1.0,
+    "pmr_common_noise": true,
+    "pmr_estimator": "noise_only",
+    "mode": "matched",
+    "resume": false,
+    "checkpoint_every": 500,
+    "N": 10000,
+    "iterations": [
+      25,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1200
+    ],
+    "lambdas": [
+      0.0,
+      1e-05,
+      3e-05,
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "n_probes": 16
+  },
+  "slurm_job_id": "66130",
+  "slurm_array_task_id": null
+}

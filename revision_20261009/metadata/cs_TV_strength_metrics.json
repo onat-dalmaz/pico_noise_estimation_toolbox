@@ -1,0 +1,80 @@
+{
+  "lambdas": [
+    3e-07,
+    9e-07,
+    3e-06,
+    9e-06,
+    3e-05,
+    9e-05
+  ],
+  "n_pmr": 3000,
+  "n_pico": 3000,
+  "rows": [
+    {
+      "lamda": 3e-07,
+      "n_pmr": 3000,
+      "n_pico": 3000,
+      "scale": 1.0879210654235298,
+      "psnr_db": 29.72338489815563,
+      "ssim": 0.7986700991484991,
+      "std_map_nrmse_support_pct": 1.3466493283211365
+    },
+    {
+      "lamda": 9e-07,
+      "n_pmr": 3000,
+      "n_pico": 3000,
+      "scale": 1.0989626055532065,
+      "psnr_db": 29.087874635194737,
+      "ssim": 0.7796363094677214,
+      "std_map_nrmse_support_pct": 2.213551885067966
+    },
+    {
+      "lamda": 3e-06,
+      "n_pmr": 3000,
+      "n_pico": 3000,
+      "scale": 1.1107782057312028,
+      "psnr_db": 28.41053276755708,
+      "ssim": 0.7004254974232917,
+      "std_map_nrmse_support_pct": 10.37706364416108
+    },
+    {
+      "lamda": 9e-06,
+      "n_pmr": 3000,
+      "n_pico": 3000,
+      "scale": 1.1265469036553528,
+      "psnr_db": 28.152620238285763,
+      "ssim": 0.6550240272787873,
+      "std_map_nrmse_support_pct": 8.296469470492537
+    },
+    {
+      "lamda": 3e-05,
+      "n_pmr": 3000,
+      "n_pico": 3000,
+      "scale": 1.1435972751325079,
+      "psnr_db": 27.350699057466148,
+      "ssim": 0.6058321120205832,
+      "std_map_nrmse_support_pct": 2.4301510370912762
+    },
+    {
+      "lamda": 9e-05,
+      "n_pmr": 3000,
+      "n_pico": 3000,
+      "scale": 1.1449314539719488,
+      "psnr_db": 26.967937071031272,
+      "ssim": 0.5989040156525803,
+      "std_map_nrmse_support_pct": 1.829569268207346
+    }
+  ],
+  "support_rule": "Same fixed object support as main Figure 7: clean selected reconstruction magnitude >10% of its maximum",
+  "support_source": "experiments/fastmri_knee/results/cs_nonlinear_R2_ctv/noise_1/slice0020/recon_mag.npy",
+  "sources": {
+    "3e-07": "/dataNAS/people/onat/mr_recon/experiments/fastmri_knee/results/lambda_tv_sweep_matched3000_20260929/lambda_0",
+    "9e-07": "/dataNAS/people/onat/mr_recon/experiments/fastmri_knee/results/lambda_tv_sweep_matched3000_20260929/lambda_1",
+    "3e-06": "/dataNAS/people/onat/mr_recon/experiments/fastmri_knee/results/lambda_tv_sweep_matched3000_20260929/lambda_2",
+    "9e-06": "/dataNAS/people/onat/mr_recon/experiments/fastmri_knee/results/lambda_tv_sweep_matched3000_20260929/lambda_3",
+    "3e-05": "/dataNAS/people/onat/mr_recon/experiments/fastmri_knee/results/lambda_tv_sweep_matched3000_20260929/lambda_4",
+    "9e-05": "/dataNAS/people/onat/mr_recon/experiments/fastmri_knee/results/lambda_tv_sweep_matched3000_20260929/lambda_5"
+  },
+  "pmr_variance": "unbiased sample variance over exactly 3000 replicas; float64 batch-Welford accumulation",
+  "note": "Reconstruction settings preserved; both estimators batched for this sweep. No timing comparison is drawn from these runs."
+}

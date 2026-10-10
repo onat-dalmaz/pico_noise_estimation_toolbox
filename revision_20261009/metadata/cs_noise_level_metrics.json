@@ -1,0 +1,146 @@
+{
+  "run_tag": "cs_nonlinear_R2_ctv",
+  "N": 3000,
+  "slice": 20,
+  "rows": [
+    {
+      "noise_scale": 1.0,
+      "sigma": 1e-07,
+      "kspace_snr_db": 35.38255038675043,
+      "roi_mean_std_ratio_pico_over_pmr": 0.9997347108124591,
+      "roi_mean_var_ratio_pico_over_pmr": 0.999490185221249,
+      "std_map_nrmse_support_pct": 1.3424443146575324,
+      "std_map_nrmse_roi_pct": 1.3595073690892725,
+      "pearson_std_support": 0.99363917946641,
+      "median_rel_dev_std_support_pct": 0.8913403226451271,
+      "negative_pico_support_count": 0,
+      "t_pmr_s": null,
+      "summary_keys": [
+        "accuracy_matched_probe",
+        "conv_N_ours",
+        "equal_runtime_probe",
+        "noise_scale",
+        "pmr_good_enough_N",
+        "reference_time_s",
+        "sigma",
+        "target_N"
+      ]
+    },
+    {
+      "noise_scale": 5.0,
+      "sigma": 5e-07,
+      "kspace_snr_db": 21.40265450336177,
+      "roi_mean_std_ratio_pico_over_pmr": 0.9950278160260212,
+      "roi_mean_var_ratio_pico_over_pmr": 0.9917527907637069,
+      "std_map_nrmse_support_pct": 1.9800952736095692,
+      "std_map_nrmse_roi_pct": 1.9529471563555298,
+      "pearson_std_support": 0.988268453727475,
+      "median_rel_dev_std_support_pct": 1.117646997836934,
+      "negative_pico_support_count": 0,
+      "t_pmr_s": null,
+      "summary_keys": [
+        "accuracy_matched_probe",
+        "conv_N_ours",
+        "equal_runtime_probe",
+        "noise_scale",
+        "pmr_good_enough_N",
+        "reference_time_s",
+        "sigma",
+        "target_N"
+      ]
+    },
+    {
+      "noise_scale": 10.0,
+      "sigma": 1e-06,
+      "kspace_snr_db": 15.38217249917571,
+      "roi_mean_std_ratio_pico_over_pmr": 0.9777079501045108,
+      "roi_mean_var_ratio_pico_over_pmr": 0.9610122536418824,
+      "std_map_nrmse_support_pct": 4.318768203910286,
+      "std_map_nrmse_roi_pct": 4.162794693316062,
+      "pearson_std_support": 0.9659425820836556,
+      "median_rel_dev_std_support_pct": 1.917043188004085,
+      "negative_pico_support_count": 0,
+      "t_pmr_s": null,
+      "summary_keys": [
+        "accuracy_matched_probe",
+        "conv_N_ours",
+        "equal_runtime_probe",
+        "noise_scale",
+        "pmr_good_enough_N",
+        "reference_time_s",
+        "sigma",
+        "target_N"
+      ]
+    },
+    {
+      "noise_scale": 50.0,
+      "sigma": 4.9999999999999996e-06,
+      "kspace_snr_db": 1.3940000479765378,
+      "roi_mean_std_ratio_pico_over_pmr": 0.7831115432055089,
+      "roi_mean_var_ratio_pico_over_pmr": 0.6213561553448121,
+      "std_map_nrmse_support_pct": 21.865007829734324,
+      "std_map_nrmse_roi_pct": 23.243297696246373,
+      "pearson_std_support": 0.3808293961212804,
+      "median_rel_dev_std_support_pct": 19.011391956977597,
+      "negative_pico_support_count": 0,
+      "t_pmr_s": null,
+      "summary_keys": [
+        "accuracy_matched_probe",
+        "conv_N_ours",
+        "equal_runtime_probe",
+        "noise_scale",
+        "pmr_good_enough_N",
+        "reference_time_s",
+        "sigma",
+        "target_N"
+      ]
+    },
+    {
+      "noise_scale": 100.0,
+      "sigma": 9.999999999999999e-06,
+      "kspace_snr_db": -4.630021275585582,
+      "roi_mean_std_ratio_pico_over_pmr": 0.7009946411990459,
+      "roi_mean_var_ratio_pico_over_pmr": 0.49787360103016726,
+      "std_map_nrmse_support_pct": 28.4660273831443,
+      "std_map_nrmse_roi_pct": 30.96752788179704,
+      "pearson_std_support": 0.15197887973792423,
+      "median_rel_dev_std_support_pct": 26.290070605802352,
+      "negative_pico_support_count": 0,
+      "t_pmr_s": null,
+      "summary_keys": [
+        "accuracy_matched_probe",
+        "conv_N_ours",
+        "equal_runtime_probe",
+        "noise_scale",
+        "pmr_good_enough_N",
+        "reference_time_s",
+        "sigma",
+        "target_N"
+      ]
+    },
+    {
+      "noise_scale": 200.0,
+      "sigma": 1.9999999999999998e-05,
+      "kspace_snr_db": -10.663708824040828,
+      "roi_mean_std_ratio_pico_over_pmr": 0.6552493701406159,
+      "roi_mean_var_ratio_pico_over_pmr": 0.4349728906120142,
+      "std_map_nrmse_support_pct": 32.19023761447793,
+      "std_map_nrmse_roi_pct": 35.31433625117908,
+      "pearson_std_support": 0.12366117839346495,
+      "median_rel_dev_std_support_pct": 30.281709750007124,
+      "negative_pico_support_count": 0,
+      "t_pmr_s": null,
+      "summary_keys": [
+        "accuracy_matched_probe",
+        "conv_N_ours",
+        "equal_runtime_probe",
+        "noise_scale",
+        "pmr_good_enough_N",
+        "reference_time_s",
+        "sigma",
+        "target_N"
+      ]
+    }
+  ],
+  "snr_definition": "10 log10((mean|b_noisy|^2 - 2 sigma^2) / (2 sigma^2)) over acquired k-space samples; sigma per real/imag component"
+}

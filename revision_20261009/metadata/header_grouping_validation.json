@@ -1,0 +1,16 @@
+{
+  "volume_count": 12,
+  "case_count": 36,
+  "distinct_patient_id_count": 11,
+  "distinct_frameOfReferenceUID_count": 11,
+  "partitions_concordant": true,
+  "group_size_counts": {
+    "1": 10,
+    "2": 1
+  },
+  "manifest_sha256": "209d6700ce110d004d39a81c991ae65e6d1c498d0b86a82bbb0446c9a52bc208",
+  "validation": "independent read-only HDF5 metadata check on2026-10-09",
+  "identifiers_exported": false,
+  "identifier_hashes_exported": false,
+  "membership_mapping_exported": false
+}

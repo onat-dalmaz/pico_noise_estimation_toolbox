@@ -1,0 +1,61 @@
+{
+  "manifest_id": "MRM-CALIBRATION-MAPS-20261009",
+  "verified_date": "2026-10-09",
+  "verification": "Read-only file SHA256 and array metadata inspection on torino; no arrays transferred.",
+  "source_root": "/dataNAS/people/onat/mr_recon",
+  "maps": [
+    {
+      "path": "experiments/noncartesian_phantom/data/mps.npy",
+      "size": 5033728,
+      "sha256": "7749334f7f7fdcd4b1d5e1925041a78058dd96eb851e167a87ffaf918e3e5d35",
+      "shape": [
+        13,
+        220,
+        220
+      ],
+      "dtype": "complex64",
+      "map_id": "PHANTOM-SPIRAL-MPS-01",
+      "checksum_kind": "SHA256 of complete retained file bytes",
+      "reported_calibration_settings": {
+        "method": "ESPIRiT",
+        "kernel": [
+          6,
+          6
+        ],
+        "svd_threshold": 0.02,
+        "source": "Archived main manuscript MRM-AMA.tex, semantic revision 20261009, line 590; manuscript statement, not independently recovered calibration command."
+      },
+      "unknown_settings": [
+        "Numerical central calibration extent",
+        "Eigenvalue crop threshold",
+        "Original calibration-generation command/version"
+      ]
+    },
+    {
+      "path": "experiments/brain_data/mps.pt",
+      "size": 12391496,
+      "sha256": "a9e4f7e562b69e0d4e52a7d4585eb7bd5be77cc86b98cadd749a32f9190e122f",
+      "shape": [
+        32,
+        220,
+        220
+      ],
+      "dtype": "torch.complex64",
+      "map_id": "IN-VIVO-SPIRAL-MPS-01",
+      "checksum_kind": "SHA256 of complete retained file bytes",
+      "reported_calibration_settings": {
+        "method": "ESPIRiT",
+        "source": "Archived main manuscript MRM-AMA.tex, semantic revision 20261009, line 593; notebook and runner load saved maps."
+      },
+      "unknown_settings": [
+        "Kernel size",
+        "SVD threshold",
+        "Numerical central calibration extent",
+        "Eigenvalue crop threshold",
+        "Original calibration-generation command/version"
+      ]
+    }
+  ],
+  "calibration_generation_source_recovered": false,
+  "scope": "This manifest identifies retained maps; it does not reconstruct missing calibration settings."
+}

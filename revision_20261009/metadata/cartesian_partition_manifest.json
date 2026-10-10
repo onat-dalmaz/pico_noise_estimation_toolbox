@@ -1,0 +1,182 @@
+{
+  "manifest_id": "MRM-CARTESIAN-PARTITIONS-20261009",
+  "subject_count": 19,
+  "selection_rule": "Fixed zero-based partition index 120, slice_axis=2, for all 19 current status records; not a central or random selection.",
+  "source": "scripts/cartesian_converged_target_audit.py lines 379-400, 966-967 and 19 current pico status.json records.",
+  "current_case_settings": [
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    },
+    {
+      "slice": 120,
+      "slice_axis": 2,
+      "R": 2,
+      "lambda": 0.0,
+      "seed": 20260830,
+      "max_eigenvalue": 2.0,
+      "true_residual_tolerance": 1e-05
+    }
+  ],
+  "participant_identifiers_and_membership_exported": false,
+  "figure2_note": "The representative Figure 2 slice uses axis 0, index 120, and a 320 by 256 grid; the quantitative current cohort uses axis 2 and 320 by 320 partitions.",
+  "original_14_subject_mapping_recovered": false
+}

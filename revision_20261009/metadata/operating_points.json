@@ -1,0 +1,61 @@
+{
+  "cartesian": {
+    "subjects": 19,
+    "R": 2,
+    "lambda": 0,
+    "N_each": 500,
+    "normal_operator_scale": 2,
+    "reference": "Analytical g-factor",
+    "residual_rtol": 1e-05,
+    "partition_index": 120,
+    "slice_axis": 2
+  },
+  "phantom": {
+    "R": [
+      2,
+      3,
+      4
+    ],
+    "operator": "Unweighted pre-whitened A^H A",
+    "lambda_physical": 0.16338,
+    "reference_N_R2": 100000,
+    "reference_N_R3_R4": 60000,
+    "reference": "Common pooled PICO and PMR reference",
+    "N_comparison_max_each": 10000,
+    "true_residual_rtol": 1e-05,
+    "CG_cap": 1200,
+    "noise_sigma": 0.01,
+    "sigma_convention": "Complex noise has E|n|^2=sigma^2"
+  },
+  "brain": {
+    "R": 2,
+    "lambda_physical": 0.09145950233459473,
+    "lambda_normalized_accelerated": 0.003,
+    "lambda_normalized_full": 0.001499985782531369,
+    "reference_N": 50000,
+    "reference_construction": "Five independent 10000-sample batches, pooled reference",
+    "metric_support": "Whole image",
+    "true_residual_rtol": 1e-05,
+    "CG_cap": 1200,
+    "configuration_note": "systems entries in brain_pmr_configuration.json govern actual normalized lambdas; some arguments entries are stale historical CLI defaults."
+  },
+  "CS": {
+    "volumes": 12,
+    "participants": 11,
+    "cases": 36,
+    "R": 2,
+    "N_each": 2000,
+    "lambda_tv": 3e-07,
+    "FISTA_outer_iterations": 30,
+    "TV_prox_iterations": 50,
+    "momentum_beta_k": "k/(k+3)",
+    "PICO": "Explicit cached tangent propagation, batched 25 probes",
+    "PMR": "Sequential reconstructions, centered Welford M2/N population variance",
+    "sigma_quadrature": 1e-07,
+    "reported_map": "Output standard deviation divided by input per-quadrature sigma",
+    "probe": "Independent real and imaginary signs; E|v|^2=2",
+    "timing_scope": "Implemented pipelines; cached/batched PICO versus sequential PMR. Both baseline construction and execution counted.",
+    "reference_scope": "No independent converged truth; method agreement at equal N.",
+    "TV_limitation": "Sensitivity/noise propagation targets the finite 30/50 iteration reconstruction algorithm."
+  }
+}

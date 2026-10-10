@@ -1,0 +1,747 @@
+{
+  "expected_cases": 36,
+  "expected_volumes": 12,
+  "expected_participants": 11,
+  "complete_cases": 36,
+  "validated_cases": [
+    {
+      "subject": "file1000000",
+      "volume_id": "file1000000",
+      "slice": 13,
+      "t_pico_s": 400.7968558430439,
+      "t_pmr_s": 741.2010077430168,
+      "nrmse_std_roi_pct": 1.6392183999654073,
+      "nrmse_std_full_image_pct": 1.6545229337164329,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000000",
+      "volume_id": "file1000000",
+      "slice": 17,
+      "t_pico_s": 400.47695818694774,
+      "t_pmr_s": 732.8037839760073,
+      "nrmse_std_roi_pct": 1.653738307855708,
+      "nrmse_std_full_image_pct": 1.639002861890188,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000000",
+      "volume_id": "file1000000",
+      "slice": 21,
+      "t_pico_s": 400.585311897099,
+      "t_pmr_s": 733.7301586989779,
+      "nrmse_std_roi_pct": 1.6362626359206285,
+      "nrmse_std_full_image_pct": 1.640134083344089,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000007",
+      "volume_id": "file1000007",
+      "slice": 13,
+      "t_pico_s": 400.46831760101486,
+      "t_pmr_s": 742.5972600439563,
+      "nrmse_std_roi_pct": 1.6092510727459448,
+      "nrmse_std_full_image_pct": 1.6054114884057928,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000007",
+      "volume_id": "file1000007",
+      "slice": 17,
+      "t_pico_s": 400.40110872895457,
+      "t_pmr_s": 737.2042098400416,
+      "nrmse_std_roi_pct": 1.6244184112572204,
+      "nrmse_std_full_image_pct": 1.606942133069073,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000007",
+      "volume_id": "file1000007",
+      "slice": 21,
+      "t_pico_s": 400.64582930807956,
+      "t_pmr_s": 722.9360175430775,
+      "nrmse_std_roi_pct": 1.619552973365275,
+      "nrmse_std_full_image_pct": 1.6145046999157537,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000017",
+      "volume_id": "file1000017",
+      "slice": 13,
+      "t_pico_s": 400.629803052987,
+      "t_pmr_s": 737.0602706259815,
+      "nrmse_std_roi_pct": 1.6069983110126373,
+      "nrmse_std_full_image_pct": 1.6165513634252213,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000017",
+      "volume_id": "file1000017",
+      "slice": 17,
+      "t_pico_s": 400.394130841014,
+      "t_pmr_s": 735.7460304939887,
+      "nrmse_std_roi_pct": 1.6119301019343488,
+      "nrmse_std_full_image_pct": 1.6225344098501338,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000017",
+      "volume_id": "file1000017",
+      "slice": 21,
+      "t_pico_s": 400.47150965500623,
+      "t_pmr_s": 732.6511273620417,
+      "nrmse_std_roi_pct": 1.6403459924964472,
+      "nrmse_std_full_image_pct": 1.6190798152679284,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000026",
+      "volume_id": "file1000026",
+      "slice": 13,
+      "t_pico_s": 400.6577056929236,
+      "t_pmr_s": 747.4202478679363,
+      "nrmse_std_roi_pct": 1.6312526547501958,
+      "nrmse_std_full_image_pct": 1.6290014044756638,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000026",
+      "volume_id": "file1000026",
+      "slice": 17,
+      "t_pico_s": 400.402846668032,
+      "t_pmr_s": 731.8288977580378,
+      "nrmse_std_roi_pct": 1.6290295578797063,
+      "nrmse_std_full_image_pct": 1.6305493368121804,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000026",
+      "volume_id": "file1000026",
+      "slice": 21,
+      "t_pico_s": 400.5748690800974,
+      "t_pmr_s": 735.1824824770447,
+      "nrmse_std_roi_pct": 1.6218211550035098,
+      "nrmse_std_full_image_pct": 1.6273180426816847,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000031",
+      "volume_id": "file1000031",
+      "slice": 13,
+      "t_pico_s": 400.34547221299727,
+      "t_pmr_s": 746.4944905580487,
+      "nrmse_std_roi_pct": 1.6017657576300126,
+      "nrmse_std_full_image_pct": 1.6128063726897912,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000031",
+      "volume_id": "file1000031",
+      "slice": 17,
+      "t_pico_s": 400.53240963001736,
+      "t_pmr_s": 738.3405499509536,
+      "nrmse_std_roi_pct": 1.5941134026880897,
+      "nrmse_std_full_image_pct": 1.600473924213833,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000031",
+      "volume_id": "file1000031",
+      "slice": 21,
+      "t_pico_s": 400.6357228429988,
+      "t_pmr_s": 737.8209338430315,
+      "nrmse_std_roi_pct": 1.5828586510831344,
+      "nrmse_std_full_image_pct": 1.5980656088967025,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000033",
+      "volume_id": "file1000033",
+      "slice": 13,
+      "t_pico_s": 400.3412643970223,
+      "t_pmr_s": 735.7420682760421,
+      "nrmse_std_roi_pct": 1.6020181522904096,
+      "nrmse_std_full_image_pct": 1.613318249725631,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000033",
+      "volume_id": "file1000033",
+      "slice": 17,
+      "t_pico_s": 400.2452448059339,
+      "t_pmr_s": 751.2329015349969,
+      "nrmse_std_roi_pct": 1.6042234157193438,
+      "nrmse_std_full_image_pct": 1.6016249215397655,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000033",
+      "volume_id": "file1000033",
+      "slice": 21,
+      "t_pico_s": 400.5344160370296,
+      "t_pmr_s": 742.7943931180052,
+      "nrmse_std_roi_pct": 1.599075781382384,
+      "nrmse_std_full_image_pct": 1.6003335220163732,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000041",
+      "volume_id": "file1000041",
+      "slice": 13,
+      "t_pico_s": 400.585744409007,
+      "t_pmr_s": 743.4119042980019,
+      "nrmse_std_roi_pct": 1.5821940431105586,
+      "nrmse_std_full_image_pct": 1.6137153073614474,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000041",
+      "volume_id": "file1000041",
+      "slice": 17,
+      "t_pico_s": 400.5781370230252,
+      "t_pmr_s": 728.5861066690413,
+      "nrmse_std_roi_pct": 1.5858895336637522,
+      "nrmse_std_full_image_pct": 1.5993624949611485,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000041",
+      "volume_id": "file1000041",
+      "slice": 21,
+      "t_pico_s": 400.38322063395754,
+      "t_pmr_s": 730.9359408559976,
+      "nrmse_std_roi_pct": 1.5899424105592124,
+      "nrmse_std_full_image_pct": 1.5968130741062,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000052",
+      "volume_id": "file1000052",
+      "slice": 13,
+      "t_pico_s": 400.5616064550122,
+      "t_pmr_s": 739.1159620629624,
+      "nrmse_std_roi_pct": 1.6028687930535044,
+      "nrmse_std_full_image_pct": 1.6100108797956587,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000052",
+      "volume_id": "file1000052",
+      "slice": 17,
+      "t_pico_s": 400.61003112001345,
+      "t_pmr_s": 731.1531032979256,
+      "nrmse_std_roi_pct": 1.6085473239909054,
+      "nrmse_std_full_image_pct": 1.6040694096341623,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000052",
+      "volume_id": "file1000052",
+      "slice": 21,
+      "t_pico_s": 400.3145316110458,
+      "t_pmr_s": 721.7178955950076,
+      "nrmse_std_roi_pct": 1.6106827840843936,
+      "nrmse_std_full_image_pct": 1.603650741369584,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000071",
+      "volume_id": "file1000071",
+      "slice": 13,
+      "t_pico_s": 400.37858322507236,
+      "t_pmr_s": 721.7474372900324,
+      "nrmse_std_roi_pct": 1.5923500447208385,
+      "nrmse_std_full_image_pct": 1.600846082071923,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000071",
+      "volume_id": "file1000071",
+      "slice": 17,
+      "t_pico_s": 400.5017860470107,
+      "t_pmr_s": 743.968127686996,
+      "nrmse_std_roi_pct": 1.5901898266184953,
+      "nrmse_std_full_image_pct": 1.6011910132278766,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000071",
+      "volume_id": "file1000071",
+      "slice": 21,
+      "t_pico_s": 400.6826319239335,
+      "t_pmr_s": 742.4177792420378,
+      "nrmse_std_roi_pct": 1.5978037743597022,
+      "nrmse_std_full_image_pct": 1.5957539202953168,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000073",
+      "volume_id": "file1000073",
+      "slice": 13,
+      "t_pico_s": 400.2617485939991,
+      "t_pmr_s": 718.2005664010067,
+      "nrmse_std_roi_pct": 1.6113126851649582,
+      "nrmse_std_full_image_pct": 1.616773872196708,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000073",
+      "volume_id": "file1000073",
+      "slice": 17,
+      "t_pico_s": 400.55592488497496,
+      "t_pmr_s": 734.205618810025,
+      "nrmse_std_roi_pct": 1.6082646110949612,
+      "nrmse_std_full_image_pct": 1.6087649901927232,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000073",
+      "volume_id": "file1000073",
+      "slice": 21,
+      "t_pico_s": 400.37419576605316,
+      "t_pmr_s": 730.7039991769707,
+      "nrmse_std_roi_pct": 1.602532947683973,
+      "nrmse_std_full_image_pct": 1.6080819996232805,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000107",
+      "volume_id": "file1000107",
+      "slice": 13,
+      "t_pico_s": 400.37707262602635,
+      "t_pmr_s": 739.4484617339913,
+      "nrmse_std_roi_pct": 1.6053008054956641,
+      "nrmse_std_full_image_pct": 1.6007829474957678,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000107",
+      "volume_id": "file1000107",
+      "slice": 17,
+      "t_pico_s": 400.7095839040121,
+      "t_pmr_s": 744.4280910060043,
+      "nrmse_std_roi_pct": 1.5984414811654968,
+      "nrmse_std_full_image_pct": 1.6004300443258253,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000107",
+      "volume_id": "file1000107",
+      "slice": 21,
+      "t_pico_s": 400.6146283179987,
+      "t_pmr_s": 737.6092281650053,
+      "nrmse_std_roi_pct": 1.6141907590338715,
+      "nrmse_std_full_image_pct": 1.6042066536029025,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000108",
+      "volume_id": "file1000108",
+      "slice": 13,
+      "t_pico_s": 400.2750155379763,
+      "t_pmr_s": 728.304799458012,
+      "nrmse_std_roi_pct": 1.592413015284436,
+      "nrmse_std_full_image_pct": 1.6137994062243928,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    },
+    {
+      "subject": "file1000108",
+      "volume_id": "file1000108",
+      "slice": 17,
+      "t_pico_s": 400.53966532601044,
+      "t_pmr_s": 749.3784442120232,
+      "nrmse_std_roi_pct": 1.5845691124124226,
+      "nrmse_std_full_image_pct": 1.6024742825844693,
+      "device": "Quadro RTX 8000",
+      "method_order": "pico-first"
+    },
+    {
+      "subject": "file1000108",
+      "volume_id": "file1000108",
+      "slice": 21,
+      "t_pico_s": 400.6738822630141,
+      "t_pmr_s": 740.1764278579503,
+      "nrmse_std_roi_pct": 1.5908164980703883,
+      "nrmse_std_full_image_pct": 1.5991908420307015,
+      "device": "Quadro RTX 8000",
+      "method_order": "pmr-first"
+    }
+  ],
+  "pending_cases": [],
+  "invalid_cases": [],
+  "statistical_unit": "equal-weight mean of three slices within volume, then equal-weight mean of volumes within participant; seconds",
+  "agreement_regions": {
+    "primary": "central 128 x 128 pixels; predeclared cohort and sampling-convergence metric",
+    "full_image_descriptive": "all image pixels; separately reported from unchanged maps to match Figure 6 support"
+  },
+  "legacy_subject_field_note": "The case field subject is the historical volume-file basename, not an independent participant ID.",
+  "volume_means": [
+    {
+      "volume_id": "file1000000",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.61970864236355,
+      "mean_pmr_s": 735.911650139334,
+      "pmr_over_pico": 1.8369332168734822,
+      "mean_nrmse_std_roi_pct": 1.6430731145805815,
+      "mean_nrmse_std_full_image_pct": 1.64455329298357
+    },
+    {
+      "volume_id": "file1000007",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.505085212683,
+      "mean_pmr_s": 734.2458291423585,
+      "pmr_over_pico": 1.83329964150754,
+      "mean_nrmse_std_roi_pct": 1.6177408191228135,
+      "mean_nrmse_std_full_image_pct": 1.6089527737968732
+    },
+    {
+      "volume_id": "file1000017",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.4984811830024,
+      "mean_pmr_s": 735.1524761606706,
+      "pmr_over_pico": 1.8355936681436567,
+      "mean_nrmse_std_roi_pct": 1.619758135147811,
+      "mean_nrmse_std_full_image_pct": 1.6193885295144277
+    },
+    {
+      "volume_id": "file1000026",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.545140480351,
+      "mean_pmr_s": 738.1438760343395,
+      "pmr_over_pico": 1.842848162254885,
+      "mean_nrmse_std_roi_pct": 1.6273677892111376,
+      "mean_nrmse_std_full_image_pct": 1.6289562613231763
+    },
+    {
+      "volume_id": "file1000031",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.5045348953378,
+      "mean_pmr_s": 740.8853247840112,
+      "pmr_over_pico": 1.8498799894428752,
+      "mean_nrmse_std_roi_pct": 1.5929126038004124,
+      "mean_nrmse_std_full_image_pct": 1.603781968600109
+    },
+    {
+      "volume_id": "file1000033",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.3736417466619,
+      "mean_pmr_s": 743.2564543096814,
+      "pmr_over_pico": 1.856407057835191,
+      "mean_nrmse_std_roi_pct": 1.601772449797379,
+      "mean_nrmse_std_full_image_pct": 1.6050922310939233
+    },
+    {
+      "volume_id": "file1000041",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.51570068866323,
+      "mean_pmr_s": 734.311317274347,
+      "pmr_over_pico": 1.833414560307478,
+      "mean_nrmse_std_roi_pct": 1.5860086624445078,
+      "mean_nrmse_std_full_image_pct": 1.6032969588095989
+    },
+    {
+      "volume_id": "file1000052",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.4953897286905,
+      "mean_pmr_s": 730.6623203186318,
+      "pmr_over_pico": 1.8243963327857728,
+      "mean_nrmse_std_roi_pct": 1.6073663003762677,
+      "mean_nrmse_std_full_image_pct": 1.6059103435998017
+    },
+    {
+      "volume_id": "file1000071",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.5210003986722,
+      "mean_pmr_s": 736.0444480730221,
+      "pmr_over_pico": 1.8377174913184957,
+      "mean_nrmse_std_roi_pct": 1.5934478818996787,
+      "mean_nrmse_std_full_image_pct": 1.5992636718650388
+    },
+    {
+      "volume_id": "file1000073",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.3972897483424,
+      "mean_pmr_s": 727.7033947960008,
+      "pmr_over_pico": 1.8174533480318429,
+      "mean_nrmse_std_roi_pct": 1.6073700813146308,
+      "mean_nrmse_std_full_image_pct": 1.6112069540042373
+    },
+    {
+      "volume_id": "file1000107",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.56709494934574,
+      "mean_pmr_s": 740.4952603016669,
+      "pmr_over_pico": 1.8486172969232715,
+      "mean_nrmse_std_roi_pct": 1.605977681898344,
+      "mean_nrmse_std_full_image_pct": 1.6018065484748316
+    },
+    {
+      "volume_id": "file1000108",
+      "n_slices": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.49618770900025,
+      "mean_pmr_s": 739.2865571759952,
+      "pmr_over_pico": 1.845926577741008,
+      "mean_nrmse_std_roi_pct": 1.5892662085890823,
+      "mean_nrmse_std_full_image_pct": 1.605154843613188
+    }
+  ],
+  "participant_means": [
+    {
+      "participant_index": 1,
+      "N_each": 2000,
+      "mean_pico_s": 400.3736417466619,
+      "mean_pmr_s": 743.2564543096814,
+      "pmr_over_pico": 1.856407057835191,
+      "mean_nrmse_std_roi_pct": 1.601772449797379,
+      "mean_nrmse_std_full_image_pct": 1.6050922310939233
+    },
+    {
+      "participant_index": 2,
+      "N_each": 2000,
+      "mean_pico_s": 400.5045348953378,
+      "mean_pmr_s": 740.8853247840112,
+      "pmr_over_pico": 1.8498799894428752,
+      "mean_nrmse_std_roi_pct": 1.5929126038004124,
+      "mean_nrmse_std_full_image_pct": 1.603781968600109
+    },
+    {
+      "participant_index": 3,
+      "N_each": 2000,
+      "mean_pico_s": 400.505085212683,
+      "mean_pmr_s": 734.2458291423585,
+      "pmr_over_pico": 1.83329964150754,
+      "mean_nrmse_std_roi_pct": 1.6177408191228135,
+      "mean_nrmse_std_full_image_pct": 1.6089527737968732
+    },
+    {
+      "participant_index": 4,
+      "N_each": 2000,
+      "mean_pico_s": 400.61970864236355,
+      "mean_pmr_s": 735.911650139334,
+      "pmr_over_pico": 1.8369332168734822,
+      "mean_nrmse_std_roi_pct": 1.6430731145805815,
+      "mean_nrmse_std_full_image_pct": 1.64455329298357
+    },
+    {
+      "participant_index": 5,
+      "N_each": 2000,
+      "mean_pico_s": 400.5210003986722,
+      "mean_pmr_s": 736.0444480730221,
+      "pmr_over_pico": 1.8377174913184957,
+      "mean_nrmse_std_roi_pct": 1.5934478818996787,
+      "mean_nrmse_std_full_image_pct": 1.5992636718650388
+    },
+    {
+      "participant_index": 6,
+      "N_each": 2000,
+      "mean_pico_s": 400.51570068866323,
+      "mean_pmr_s": 734.311317274347,
+      "pmr_over_pico": 1.833414560307478,
+      "mean_nrmse_std_roi_pct": 1.5860086624445078,
+      "mean_nrmse_std_full_image_pct": 1.6032969588095989
+    },
+    {
+      "participant_index": 7,
+      "N_each": 2000,
+      "mean_pico_s": 400.3972897483424,
+      "mean_pmr_s": 727.7033947960008,
+      "pmr_over_pico": 1.8174533480318429,
+      "mean_nrmse_std_roi_pct": 1.6073700813146308,
+      "mean_nrmse_std_full_image_pct": 1.6112069540042373
+    },
+    {
+      "participant_index": 8,
+      "N_each": 2000,
+      "mean_pico_s": 400.4984811830024,
+      "mean_pmr_s": 735.1524761606706,
+      "pmr_over_pico": 1.8355936681436567,
+      "mean_nrmse_std_roi_pct": 1.619758135147811,
+      "mean_nrmse_std_full_image_pct": 1.6193885295144277
+    },
+    {
+      "participant_index": 9,
+      "N_each": 2000,
+      "mean_pico_s": 400.55611771484837,
+      "mean_pmr_s": 739.3195681680032,
+      "pmr_over_pico": 1.8457328086406033,
+      "mean_nrmse_std_roi_pct": 1.6166727355547408,
+      "mean_nrmse_std_full_image_pct": 1.6153814048990038
+    },
+    {
+      "participant_index": 10,
+      "N_each": 2000,
+      "mean_pico_s": 400.4953897286905,
+      "mean_pmr_s": 730.6623203186318,
+      "pmr_over_pico": 1.8243963327857728,
+      "mean_nrmse_std_roi_pct": 1.6073663003762677,
+      "mean_nrmse_std_full_image_pct": 1.6059103435998017
+    },
+    {
+      "participant_index": 11,
+      "N_each": 2000,
+      "mean_pico_s": 400.49618770900025,
+      "mean_pmr_s": 739.2865571759952,
+      "pmr_over_pico": 1.845926577741008,
+      "mean_nrmse_std_roi_pct": 1.5892662085890823,
+      "mean_nrmse_std_full_image_pct": 1.605154843613188
+    }
+  ],
+  "status": "complete",
+  "participant_grouping_validation_sha256": "aee2dc768b63436d8c37aa8593f8a6ba738cf447c938094f3be5377d19d82647",
+  "participant_grouping_validation": {
+    "status": "passed",
+    "volume_count": 12,
+    "participant_group_count": 11,
+    "partitions_concordant": true,
+    "group_size_counts": {
+      "1": 10,
+      "2": 1
+    },
+    "all36_cases_included": true,
+    "source_manifest_sha256": "209d6700ce110d004d39a81c991ae65e6d1c498d0b86a82bbb0446c9a52bc208",
+    "aggregation": "slice_to_volume_to_participant_equal_weights",
+    "identifier_values_exported": false,
+    "identifier_or_header_hashes_exported": false,
+    "mapping_exported": false
+  },
+  "inference_revision": "Before final cohort aggregation, metadata revealed 12 volumes from 11 participants. All 36 cases were retained; the planned volume-level test was replaced by participant-level inference. Volume summaries remain descriptive.",
+  "final_summary": {
+    "n_participants": 11,
+    "n_volumes": 12,
+    "n_slices": 36,
+    "N_each": 2000,
+    "statistical_unit": "equal-weight mean of three slices within volume, then equal-weight mean of volumes within participant; seconds",
+    "pico_seconds": {
+      "mean": 400.49846706075135,
+      "sample_sd": 0.06688898267303602,
+      "min": 400.3736417466619,
+      "max": 400.61970864236355
+    },
+    "pmr_seconds": {
+      "mean": 736.070849122005,
+      "sample_sd": 4.497439579725762,
+      "min": 727.7033947960008,
+      "max": 743.2564543096814
+    },
+    "participant_runtime_ratio": {
+      "mean": 1.8378867902389044,
+      "sample_sd": 0.0112240477405509,
+      "min": 1.8174533480318429,
+      "max": 1.856407057835191
+    },
+    "agreement_participant_mean_nrmse_std_roi_pct": {
+      "mean": 1.6068535447843553,
+      "sample_sd": 0.016845080410114427,
+      "min": 1.5860086624445078,
+      "max": 1.6430731145805815
+    },
+    "agreement_participant_mean_nrmse_std_full_image_pct": {
+      "mean": 1.6110893611617976,
+      "sample_sd": 0.012504735661780455,
+      "min": 1.5992636718650388,
+      "max": 1.64455329298357
+    },
+    "ratio_of_group_mean_times": 1.837886807717421,
+    "wilcoxon_two_sided_exact": {
+      "W": 0.0,
+      "p": 0.0009765625
+    },
+    "agreement_case_nrmse_std_roi_pct": {
+      "mean": 1.6076718106818872,
+      "sample_sd": 0.017681447105915103,
+      "min": 1.5821940431105586,
+      "max": 1.653738307855708
+    },
+    "agreement_case_nrmse_std_full_image_pct": {
+      "mean": 1.611447031473231,
+      "sample_sd": 0.013813020885622628,
+      "min": 1.5957539202953168,
+      "max": 1.6545229337164329
+    },
+    "agreement_aggregation": "Primary and full-image descriptive SD NRMSE: average three slices within each volume, then average volumes within each participant; summarize 11 participant means. Case ranges describe all 36 saved maps.",
+    "scope": "equal-N measured runtime; no equal-precision or time-to-target claim"
+  },
+  "volume_descriptive_summary": {
+    "n_volumes": 12,
+    "n_slices": 36,
+    "N_each": 2000,
+    "inference": false,
+    "pico_seconds": {
+      "mean": 400.5032712819261,
+      "sample_sd": 0.06607777154054768,
+      "min": 400.3736417466619,
+      "max": 400.61970864236355
+    },
+    "pmr_seconds": {
+      "mean": 736.3415757091716,
+      "sample_sd": 4.418029101297226,
+      "min": 727.7033947960008,
+      "max": 743.2564543096814
+    },
+    "volume_runtime_ratio": {
+      "mean": 1.8385406119304584,
+      "sample_sd": 0.011007690139971587,
+      "min": 1.8174533480318429,
+      "max": 1.856407057835191
+    },
+    "agreement_volume_mean_nrmse_std_roi_pct": {
+      "mean": 1.607671810681887,
+      "sample_sd": 0.016934949027206967,
+      "min": 1.5860086624445078,
+      "max": 1.6430731145805815
+    },
+    "agreement_volume_mean_nrmse_std_full_image_pct": {
+      "mean": 1.6114470314732314,
+      "sample_sd": 0.013311389847542196,
+      "min": 1.5992636718650388,
+      "max": 1.64455329298357
+    },
+    "ratio_of_group_mean_times": 1.8385407274010477
+  }
+}

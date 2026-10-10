@@ -1,0 +1,689 @@
+{
+  "snapshot_id": "MRM-REVISION-CODE-20261009",
+  "snapshot_content_sha256": "fdde97882ebdf39de1a1e181128c8f2f88ec201158b8074bb8522a0e36dbf796",
+  "git_base_head": "c87a60be6255a09d7167eb6aaad94159a1d94e90",
+  "git_head_is_exact_publication_revision": false,
+  "tracked_changes": [
+    "README.md",
+    "environment.yml",
+    "notebooks/01_cartesian_knee.ipynb",
+    "notebooks/02_noncartesian_spiral.ipynb",
+    "notebooks/03_compressed_sensing.ipynb",
+    "src/mr_recon/algs.py",
+    "src/mr_recon/gfactor.py",
+    "src/mr_recon/linops.py",
+    "src/mr_recon/prox.py",
+    "src/mr_recon/recons.py"
+  ],
+  "revision_script_tracking_note": "Current drivers were not returned by git ls-files; snapshot includes retained untracked drivers.",
+  "arrays_or_participant_identifiers_included": false,
+  "verification": {
+    "Python_AST_parse_count": 64,
+    "JSON_read_success": true,
+    "source_byte_hash_checks": "Numerical modules and drivers byte-identical to source; README wording edited locally as recorded.",
+    "experiments_rerun": false
+  },
+  "inventory": [
+    {
+      "path": "LICENSE",
+      "size": 1119,
+      "sha256": "a80c64fb86db3c499c5f8e4dd4ab6fef2bc058b3eeb56ab98e8d600e5860d907",
+      "remote_relative_path": "LICENSE",
+      "remote_sha256": "a80c64fb86db3c499c5f8e4dd4ab6fef2bc058b3eeb56ab98e8d600e5860d907",
+      "exact_bytes": true
+    },
+    {
+      "path": "README.md",
+      "size": 7096,
+      "sha256": "62a506241ef225b6b2b057113593d4aa04aa86d703fbcb8ad8836bacd0e3dab3",
+      "origin": "Derived review documentation; no source/operator edits.",
+      "exact_bytes": false,
+      "local_edit_note": "Corrected baseline reconstruction timing wording and described current snapshot publication separately; scientific code unchanged."
+    },
+    {
+      "path": "calibration_manifest.json",
+      "size": 2121,
+      "sha256": "0c3403ab49c6369483dc301c84221d8a82658407e93f4fc3fbfc59971cf7eefd",
+      "origin": "Derived review documentation; no source/operator edits."
+    },
+    {
+      "path": "environment.yml",
+      "size": 1506,
+      "sha256": "2ea1e21881f5403719df995ea8bd76832fa6fb0bf90cb164806ebdfa8d05385a",
+      "remote_relative_path": "environment.yml",
+      "remote_sha256": "2ea1e21881f5403719df995ea8bd76832fa6fb0bf90cb164806ebdfa8d05385a",
+      "exact_bytes": true
+    },
+    {
+      "path": "metadata/brain_pmr_configuration.json",
+      "size": 2214,
+      "sha256": "9c7a8268f6c9016680d4ccb6db924d1ae188265b79d43253a008b251294fc8c1",
+      "local_source": "deliverables/mrm_final_proofread_20261008/review/brain_pmr_configuration.json",
+      "source_sha256": "9c7a8268f6c9016680d4ccb6db924d1ae188265b79d43253a008b251294fc8c1",
+      "exact_bytes": true
+    },
+    {
+      "path": "metadata/cartesian_partition_manifest.json",
+      "size": 4141,
+      "sha256": "818ffe5aace96889b3664ee47c353dbe9eeb893d249710b262d2f577e5999f70",
+      "origin": "Derived review documentation; no source/operator edits."
+    },
+    {
+      "path": "metadata/cs_TV_strength_metrics.json",
+      "size": 2807,
+      "sha256": "8c3850fc314b731454a8b41ba0c95439ce8d6f46ad5f5954b046c91dbb89357f",
+      "local_source": "deliverables/mrm_operating_point_revision_20260930/figs/si_candidates/high_tv/ctv_sweep_fidelity_metrics.json",
+      "source_sha256": "8c3850fc314b731454a8b41ba0c95439ce8d6f46ad5f5954b046c91dbb89357f",
+      "exact_bytes": true
+    },
+    {
+      "path": "metadata/cs_cohort_timing_provenance.json",
+      "size": 24146,
+      "sha256": "8f397a49db8d6334d1e9b2e02f99ddd8c12d19c63bd10aedef1aa9d079e6b5e0",
+      "local_source": "deliverables/mrm_final_proofread_20261008/review/cs_cohort_timing_provenance.json",
+      "source_sha256": "8f397a49db8d6334d1e9b2e02f99ddd8c12d19c63bd10aedef1aa9d079e6b5e0",
+      "exact_bytes": true
+    },
+    {
+      "path": "metadata/cs_noise_level_metrics.json",
+      "size": 4716,
+      "sha256": "ad5b2e3a8ac52397deb90d5b59b694688d781d35c1480dc2cfcc5359a05ee4fb",
+      "local_source": "deliverables/mrm_operating_point_revision_20260930/figs/cs_linearity_ctv_metrics.json",
+      "source_sha256": "ad5b2e3a8ac52397deb90d5b59b694688d781d35c1480dc2cfcc5359a05ee4fb",
+      "exact_bytes": true
+    },
+    {
+      "path": "metadata/fastMRI_cohort_manifest.json",
+      "size": 9490,
+      "sha256": "f5c39711d956968bbaadca8ec6ae05c0e3e662bbd421e7464132d02f4e35de06",
+      "origin": "Derived review documentation; no source/operator edits."
+    },
+    {
+      "path": "metadata/fastMRI_map_slice_checksums.json",
+      "size": 13086,
+      "sha256": "9ff4b042aa600ee411d3b4625186e325411454157cd131840d12819395d3df7b",
+      "origin": "Derived review documentation; no source/operator edits."
+    },
+    {
+      "path": "metadata/header_grouping_validation.json",
+      "size": 486,
+      "sha256": "2c290b14761a24bb4ea2e3e8701e0193f80b5097d6c1fa897a83716ca24ba59d",
+      "origin": "Derived review documentation; no source/operator edits."
+    },
+    {
+      "path": "metadata/local_dependency_edges.json",
+      "size": 22713,
+      "sha256": "4dec9fa4982801fb07bb024016fcec022a2763cbb9e9772698ac9149b7540a9a",
+      "origin": "Derived review documentation; no source/operator edits."
+    },
+    {
+      "path": "metadata/noncart_seed_replication.json",
+      "size": 3807,
+      "sha256": "446ec69f4e26e56783b807c045655aa6b6937bed187e6ed071df24dec17c2b0d",
+      "remote_relative_path": "reports/noncart_seed_replication.json",
+      "remote_sha256": "39bccd751812b21232f22da64f0ea2e2450a2fbe5bfac708f82d58e900be9657",
+      "exact_bytes": false,
+      "note": "JSON content preserved; formatting normalized."
+    },
+    {
+      "path": "metadata/operating_points.json",
+      "size": 2125,
+      "sha256": "7d00a206d32b7cf0a7f6633db2c74b12d1e39d8e97defef3e0107f23320de8f4",
+      "origin": "Derived review documentation; no source/operator edits."
+    },
+    {
+      "path": "metadata/phantom_operator_manifest.json",
+      "size": 14675,
+      "sha256": "57573293f3f59bd8d48e97881e2e7876fb28325c1d891ddba5905bb423171b9e",
+      "remote_relative_path": "experiments/noncartesian_phantom/results/noncart_final_grid_lam0.16338/operator_manifest.json",
+      "remote_sha256": "91ef33295035531ada71d9edb17ee6087174c222b55e4ac34f692adc1740354d",
+      "exact_bytes": false,
+      "note": "JSON content preserved; formatting normalized."
+    },
+    {
+      "path": "metadata/toeplitz_covariance_order_check.json",
+      "size": 4089,
+      "sha256": "a54d2fb7a31ea13acbdec36fa2f776203f6ee1ce15ab75da6c6a710b4bd14100",
+      "remote_relative_path": "reports/toeplitz_covariance_order_check.json",
+      "remote_sha256": "a54d2fb7a31ea13acbdec36fa2f776203f6ee1ce15ab75da6c6a710b4bd14100",
+      "exact_bytes": false,
+      "note": "JSON content preserved; formatting normalized."
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 309,
+      "sha256": "945b92ae4b1b77424abddd2d27cdc244fe0e1a2c867128bf489c1ebd057c1134",
+      "remote_relative_path": "pyproject.toml",
+      "remote_sha256": "945b92ae4b1b77424abddd2d27cdc244fe0e1a2c867128bf489c1ebd057c1134",
+      "exact_bytes": true
+    },
+    {
+      "path": "requirements.txt",
+      "size": 1380,
+      "sha256": "24ec166743c40af07c164ee7996969aae83450f2f5689abe5617198ea37fb647",
+      "remote_relative_path": "requirements.txt",
+      "remote_sha256": "24ec166743c40af07c164ee7996969aae83450f2f5689abe5617198ea37fb647",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/audit_cs_cohort_timing_rtx8000_20261007.py",
+      "size": 9410,
+      "sha256": "8e9a0c63dca9c93459d3b67848f5bc4a9f0a750798349c52d29d31c9b08bca88",
+      "remote_relative_path": "scripts/audit_cs_cohort_timing_rtx8000_20261007.py",
+      "remote_sha256": "8e9a0c63dca9c93459d3b67848f5bc4a9f0a750798349c52d29d31c9b08bca88",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/audit_noncart_saved_maps.py",
+      "size": 22138,
+      "sha256": "b85ee3587e2ad054605ab7f3ef5e257f4c54e574451c782fd1f403bea1453498",
+      "remote_relative_path": "scripts/audit_noncart_saved_maps.py",
+      "remote_sha256": "b85ee3587e2ad054605ab7f3ef5e257f4c54e574451c782fd1f403bea1453498",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/brain_batch_reference_20260930.py",
+      "size": 9357,
+      "sha256": "4dfb2bc86545b3ecb04cbbc843905b59b7763434e90a29f2f3b1e7828d9baf6c",
+      "remote_relative_path": "scripts/brain_batch_reference_20260930.py",
+      "remote_sha256": "4dfb2bc86545b3ecb04cbbc843905b59b7763434e90a29f2f3b1e7828d9baf6c",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/cartesian_converged_target_audit.py",
+      "size": 38671,
+      "sha256": "a83eb6038cebf04215df9b3d4f09eeb55a6869bf60f9134d1958686506ff1291",
+      "remote_relative_path": "scripts/cartesian_converged_target_audit.py",
+      "remote_sha256": "a83eb6038cebf04215df9b3d4f09eeb55a6869bf60f9134d1958686506ff1291",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/cs_batched_timing.py",
+      "size": 15718,
+      "sha256": "5cbae831d64b21cef3a6079d7bb693cee08fe55c76cc957a2be75de2b00c8c39",
+      "remote_relative_path": "scripts/cs_batched_timing.py",
+      "remote_sha256": "5cbae831d64b21cef3a6079d7bb693cee08fe55c76cc957a2be75de2b00c8c39",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/cs_cohort_timing_manifest_20260930.csv",
+      "size": 1208,
+      "sha256": "209d6700ce110d004d39a81c991ae65e6d1c498d0b86a82bbb0446c9a52bc208",
+      "remote_relative_path": "scripts/cs_cohort_timing_manifest_20260930.csv",
+      "remote_sha256": "209d6700ce110d004d39a81c991ae65e6d1c498d0b86a82bbb0446c9a52bc208",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/cs_pico_linearize_pilot_20261007.py",
+      "size": 9527,
+      "sha256": "81b26e6ab56903b90615877b42de8240b0887251a8fa0b63d6285b3ca66195bb",
+      "remote_relative_path": "scripts/cs_pico_linearize_pilot_20261007.py",
+      "remote_sha256": "81b26e6ab56903b90615877b42de8240b0887251a8fa0b63d6285b3ca66195bb",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/cs_recheck_pico_pmr.py",
+      "size": 16061,
+      "sha256": "0f6d48344299c5a77f67d68f333023acb13b40e3cd43ba4a552dc012b86d1c8e",
+      "remote_relative_path": "scripts/cs_recheck_pico_pmr.py",
+      "remote_sha256": "0f6d48344299c5a77f67d68f333023acb13b40e3cd43ba4a552dc012b86d1c8e",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/factor_comparator_core.py",
+      "size": 8777,
+      "sha256": "3a493265a9f4f693aee3f165450c5f22b376541f766835e9a1ca60bd84332045",
+      "remote_relative_path": "scripts/factor_comparator_core.py",
+      "remote_sha256": "3a493265a9f4f693aee3f165450c5f22b376541f766835e9a1ca60bd84332045",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/noncart_audit_core.py",
+      "size": 6650,
+      "sha256": "b9d0c1d772d8c7f1686214da4af1d7694f853c42b5032c01ef395c05c53c3731",
+      "remote_relative_path": "scripts/noncart_audit_core.py",
+      "remote_sha256": "b9d0c1d772d8c7f1686214da4af1d7694f853c42b5032c01ef395c05c53c3731",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/noncart_final_grid_core.py",
+      "size": 9871,
+      "sha256": "0dee153364a2a6cbc57cad468468ebad4ac27f543f707c8a3e3fc5c6048daf4b",
+      "remote_relative_path": "scripts/noncart_final_grid_core.py",
+      "remote_sha256": "0dee153364a2a6cbc57cad468468ebad4ac27f543f707c8a3e3fc5c6048daf4b",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/noncart_truncated_cg_comparison.py",
+      "size": 17787,
+      "sha256": "a44c17ca8cb73cb5d767ed3a580390300f6905362b6af51b8c8479f6a5bdbd94",
+      "remote_relative_path": "scripts/noncart_truncated_cg_comparison.py",
+      "remote_sha256": "a44c17ca8cb73cb5d767ed3a580390300f6905362b6af51b8c8479f6a5bdbd94",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/nonlinear_cs_N_comparison.py",
+      "size": 18124,
+      "sha256": "ad73d67d5662d052edc951d785f18a9242a5cc19304d163e1f6f32c18c45e254",
+      "remote_relative_path": "scripts/nonlinear_cs_N_comparison.py",
+      "remote_sha256": "ad73d67d5662d052edc951d785f18a9242a5cc19304d163e1f6f32c18c45e254",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/nonlinear_cs_noise_sweep.py",
+      "size": 39937,
+      "sha256": "0522c7d49dfecb2720ea339fff1149326c5497a0fdb34fd23ae6f0a1f7dbabb3",
+      "remote_relative_path": "scripts/nonlinear_cs_noise_sweep.py",
+      "remote_sha256": "0522c7d49dfecb2720ea339fff1149326c5497a0fdb34fd23ae6f0a1f7dbabb3",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/pool_brain_reference.py",
+      "size": 2963,
+      "sha256": "e84256bb0d950a4d81df2b129aaa992a5b5711b6ff6d42c4763cc4386694830f",
+      "remote_relative_path": "scripts/pool_brain_reference.py",
+      "remote_sha256": "e84256bb0d950a4d81df2b129aaa992a5b5711b6ff6d42c4763cc4386694830f",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_brain_noncart.py",
+      "size": 13113,
+      "sha256": "b1a627bb3fc415a0b51b29ca550c428778ef830ea17071588bf06bb81fd8ec54",
+      "remote_relative_path": "scripts/run_brain_noncart.py",
+      "remote_sha256": "b1a627bb3fc415a0b51b29ca550c428778ef830ea17071588bf06bb81fd8ec54",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_cs_cohort_timing_20260930.py",
+      "size": 13661,
+      "sha256": "576e1fc6603d75d4fc0634fd836a5e13991e708c20fce048e9104420cbcb7580",
+      "remote_relative_path": "scripts/run_cs_cohort_timing_20260930.py",
+      "remote_sha256": "576e1fc6603d75d4fc0634fd836a5e13991e708c20fce048e9104420cbcb7580",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "size": 8065,
+      "sha256": "97da99a1c6053a34e887dc1484abfde9dcbe63a173f977ce97133f395f73feba",
+      "remote_relative_path": "scripts/run_cs_cohort_timing_rtx8000_20261007.py",
+      "remote_sha256": "97da99a1c6053a34e887dc1484abfde9dcbe63a173f977ce97133f395f73feba",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_lambda_tv_sweep.py",
+      "size": 11432,
+      "sha256": "eead874bf35fc801188205b021a14acbc60ac108d5a3ec63c9c24daf3d65ab83",
+      "remote_relative_path": "scripts/run_lambda_tv_sweep.py",
+      "remote_sha256": "eead874bf35fc801188205b021a14acbc60ac108d5a3ec63c9c24daf3d65ab83",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_noncart_final_grid.py",
+      "size": 57065,
+      "sha256": "58f12cd3d0a9dd80832128015e1e2dd59b2d47c8779f277b5a17831c8ddbc779",
+      "remote_relative_path": "scripts/run_noncart_final_grid.py",
+      "remote_sha256": "58f12cd3d0a9dd80832128015e1e2dd59b2d47c8779f277b5a17831c8ddbc779",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_noncart_lambda_selection.py",
+      "size": 15383,
+      "sha256": "2c0e37cacd811b88ea2a13e9673e28696d6177c0806ab3d6a9643c6516749e4f",
+      "remote_relative_path": "scripts/run_noncart_lambda_selection.py",
+      "remote_sha256": "2c0e37cacd811b88ea2a13e9673e28696d6177c0806ab3d6a9643c6516749e4f",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_noncart_weekend_audit.py",
+      "size": 41856,
+      "sha256": "929bf24c3e740fb8c5716278e4de536a92f4c7984b8d081cd1e05f525b123151",
+      "remote_relative_path": "scripts/run_noncart_weekend_audit.py",
+      "remote_sha256": "929bf24c3e740fb8c5716278e4de536a92f4c7984b8d081cd1e05f525b123151",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_spiral_brain_recon.py",
+      "size": 10380,
+      "sha256": "d6e934b09139d0e0ec1ece512d28a2afb3e174ee247030221ca42cc7025764ca",
+      "remote_relative_path": "scripts/run_spiral_brain_recon.py",
+      "remote_sha256": "d6e934b09139d0e0ec1ece512d28a2afb3e174ee247030221ca42cc7025764ca",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/run_tv_sweep_matched_3000.py",
+      "size": 6337,
+      "sha256": "3354da132412885b82d53b18b9c694bc05e5fdbd4af829dfea2075aef9836424",
+      "remote_relative_path": "scripts/run_tv_sweep_matched_3000.py",
+      "remote_sha256": "3354da132412885b82d53b18b9c694bc05e5fdbd4af829dfea2075aef9836424",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/tv_lambda_select_converged.py",
+      "size": 7543,
+      "sha256": "4336e31fa97b31ab9d00913cebb23030226ac19336a10965c4924a1c97b8ebce",
+      "remote_relative_path": "scripts/tv_lambda_select_converged.py",
+      "remote_sha256": "4336e31fa97b31ab9d00913cebb23030226ac19336a10965c4924a1c97b8ebce",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/tv_recon_fidelity.py",
+      "size": 6743,
+      "sha256": "7de82ac5cc89e71c3be36ceb654217b648e5d71c9868bfdaf10132d0a74179ba",
+      "remote_relative_path": "scripts/tv_recon_fidelity.py",
+      "remote_sha256": "7de82ac5cc89e71c3be36ceb654217b648e5d71c9868bfdaf10132d0a74179ba",
+      "exact_bytes": true
+    },
+    {
+      "path": "scripts/update_manifest_135.py",
+      "size": 7029,
+      "sha256": "fc5e2d717457b2c6377f6ca7a4b802d2d473bd572c4039efa90ded7e46cd7632",
+      "remote_relative_path": "scripts/update_manifest_135.py",
+      "remote_sha256": "fc5e2d717457b2c6377f6ca7a4b802d2d473bd572c4039efa90ded7e46cd7632",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/__init__.py",
+      "size": 100,
+      "sha256": "eb5d80eeb46d6ea36546a57aecabc2cec9707275c884ea73e6d13089a446da0f",
+      "remote_relative_path": "src/mr_recon/__init__.py",
+      "remote_sha256": "eb5d80eeb46d6ea36546a57aecabc2cec9707275c884ea73e6d13089a446da0f",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/algs.py",
+      "size": 21839,
+      "sha256": "07264e31b62d2dbd5fc799a7e1bb04be922aa28018e65e3b8790b1ba0ea6b123",
+      "remote_relative_path": "src/mr_recon/algs.py",
+      "remote_sha256": "07264e31b62d2dbd5fc799a7e1bb04be922aa28018e65e3b8790b1ba0ea6b123",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/block.py",
+      "size": 4567,
+      "sha256": "cb5ccbd30f32b41b7c97b0e11829f75769bf2f6282001bce335758c9e700f540",
+      "remote_relative_path": "src/mr_recon/block.py",
+      "remote_sha256": "cb5ccbd30f32b41b7c97b0e11829f75769bf2f6282001bce335758c9e700f540",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/calib.py",
+      "size": 13008,
+      "sha256": "2a42260b6b98b660e992a57da07e77a06cec9abea14c8375cab92fc3df90407f",
+      "remote_relative_path": "src/mr_recon/calib.py",
+      "remote_sha256": "2a42260b6b98b660e992a57da07e77a06cec9abea14c8375cab92fc3df90407f",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/covariance_apply.py",
+      "size": 9195,
+      "sha256": "f484cf8628bc598d50021876a12e56bea547d9b320e7ebb8280c16b3296828d2",
+      "remote_relative_path": "src/mr_recon/covariance_apply.py",
+      "remote_sha256": "f484cf8628bc598d50021876a12e56bea547d9b320e7ebb8280c16b3296828d2",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/dtypes.py",
+      "size": 569,
+      "sha256": "5b20f4e93837676e267a88318fd560cfd7fac0e455fa7bd2ce3733d5ab2d3dae",
+      "remote_relative_path": "src/mr_recon/dtypes.py",
+      "remote_sha256": "5b20f4e93837676e267a88318fd560cfd7fac0e455fa7bd2ce3733d5ab2d3dae",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/fourier.py",
+      "size": 48873,
+      "sha256": "beeea1217b80e062247e5c0197509d88b505536ef307c6b493ca2344ff5b27cb",
+      "remote_relative_path": "src/mr_recon/fourier.py",
+      "remote_sha256": "beeea1217b80e062247e5c0197509d88b505536ef307c6b493ca2344ff5b27cb",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/gfactor.py",
+      "size": 12034,
+      "sha256": "7a92d9a0f1aaff5236118fc481d736abcf5ee1c125f2db721799e2a9a8640896",
+      "remote_relative_path": "src/mr_recon/gfactor.py",
+      "remote_sha256": "7a92d9a0f1aaff5236118fc481d736abcf5ee1c125f2db721799e2a9a8640896",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/gfactor_earlystop.py",
+      "size": 13820,
+      "sha256": "a2aca5928b8ca458cf9eaf91157bf8120004521ac7a4e44463ae7feae32fa425",
+      "remote_relative_path": "src/mr_recon/gfactor_earlystop.py",
+      "remote_sha256": "a2aca5928b8ca458cf9eaf91157bf8120004521ac7a4e44463ae7feae32fa425",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/grad_utils.py",
+      "size": 11039,
+      "sha256": "e81775a974cc30b604ffcac3a72f48b90c79e3bd601cc41a0aeb3e9dd0b9084d",
+      "remote_relative_path": "src/mr_recon/grad_utils.py",
+      "remote_sha256": "e81775a974cc30b604ffcac3a72f48b90c79e3bd601cc41a0aeb3e9dd0b9084d",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/b0_est.py",
+      "size": 5488,
+      "sha256": "4be919e25968d684e133dc228973a4d19d5ac3b4cab02efb6d7f4df692c6ac98",
+      "remote_relative_path": "src/mr_recon/imperfections/b0_est.py",
+      "remote_sha256": "4be919e25968d684e133dc228973a4d19d5ac3b4cab02efb6d7f4df692c6ac98",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/coco.py",
+      "size": 5290,
+      "sha256": "eb6b3eb182aabdf9c64c9ec31766d1deb83d3fb4df987223aba1ea31e109491d",
+      "remote_relative_path": "src/mr_recon/imperfections/coco.py",
+      "remote_sha256": "eb6b3eb182aabdf9c64c9ec31766d1deb83d3fb4df987223aba1ea31e109491d",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/combine.py",
+      "size": 8392,
+      "sha256": "fbcc2795704ef0f6b460900ab0fcc97e2f85441138efaf80e0da47a7744d0c4f",
+      "remote_relative_path": "src/mr_recon/imperfections/combine.py",
+      "remote_sha256": "fbcc2795704ef0f6b460900ab0fcc97e2f85441138efaf80e0da47a7744d0c4f",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/eddy.py",
+      "size": 4829,
+      "sha256": "01d2c5bb2d83ed2a2510ede8744f50b8fbbec21fc8409b2dd1699914d8bda47a",
+      "remote_relative_path": "src/mr_recon/imperfections/eddy.py",
+      "remote_sha256": "01d2c5bb2d83ed2a2510ede8744f50b8fbbec21fc8409b2dd1699914d8bda47a",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/exponential.py",
+      "size": 23050,
+      "sha256": "81d662ba0418e4bb23c936ffb62abbe4dcdc273f0dd8a7089212dafe0366f02f",
+      "remote_relative_path": "src/mr_recon/imperfections/exponential.py",
+      "remote_sha256": "81d662ba0418e4bb23c936ffb62abbe4dcdc273f0dd8a7089212dafe0366f02f",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/imperf_decomp.py",
+      "size": 9428,
+      "sha256": "ff7a10bf330ef9d4e10c2a9073bd8870e67da0b50913c4911ca1b7ad6d9c5c85",
+      "remote_relative_path": "src/mr_recon/imperfections/imperf_decomp.py",
+      "remote_sha256": "ff7a10bf330ef9d4e10c2a9073bd8870e67da0b50913c4911ca1b7ad6d9c5c85",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/imperfection.py",
+      "size": 6507,
+      "sha256": "f3be01f7a60ede5b3d13d9e93339b0fe811c9ee4108835ba8a49dffbe855f33e",
+      "remote_relative_path": "src/mr_recon/imperfections/imperfection.py",
+      "remote_sha256": "f3be01f7a60ede5b3d13d9e93339b0fe811c9ee4108835ba8a49dffbe855f33e",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/main_field.py",
+      "size": 4960,
+      "sha256": "550e1a3011ccb4ac41afb5c6bd69a0ac953fba9773fbc1ebaacca72c8b47d254",
+      "remote_relative_path": "src/mr_recon/imperfections/main_field.py",
+      "remote_sha256": "550e1a3011ccb4ac41afb5c6bd69a0ac953fba9773fbc1ebaacca72c8b47d254",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/motion.py",
+      "size": 18999,
+      "sha256": "6a7d5d331daf45a2a3fc406ba543c0d211da220006a608c431e5183a6f06c5a2",
+      "remote_relative_path": "src/mr_recon/imperfections/motion.py",
+      "remote_sha256": "6a7d5d331daf45a2a3fc406ba543c0d211da220006a608c431e5183a6f06c5a2",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/off_grid.py",
+      "size": 2191,
+      "sha256": "ecd3655f80de6e50c8e7d2f9e9cbd7cc5a193b2884564a49870089889568a183",
+      "remote_relative_path": "src/mr_recon/imperfections/off_grid.py",
+      "remote_sha256": "ecd3655f80de6e50c8e7d2f9e9cbd7cc5a193b2884564a49870089889568a183",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/imperfections/spatio_temporal_imperf.py",
+      "size": 27378,
+      "sha256": "40e7974816594f4dee0fbdb0765e8242f2cb2a8f9f3382ef6779fcbb3dc7793f",
+      "remote_relative_path": "src/mr_recon/imperfections/spatio_temporal_imperf.py",
+      "remote_sha256": "40e7974816594f4dee0fbdb0765e8242f2cb2a8f9f3382ef6779fcbb3dc7793f",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/indexing.py",
+      "size": 3659,
+      "sha256": "d64ea3bba1e9d70864555b7ea5704fee3512cf146f451863ddb95308499ec505",
+      "remote_relative_path": "src/mr_recon/indexing.py",
+      "remote_sha256": "d64ea3bba1e9d70864555b7ea5704fee3512cf146f451863ddb95308499ec505",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/iqa.py",
+      "size": 6431,
+      "sha256": "1bbea346804cc0c4a8ab2eaf470b934c46fa134609b997504331ca21433229b5",
+      "remote_relative_path": "src/mr_recon/iqa.py",
+      "remote_sha256": "1bbea346804cc0c4a8ab2eaf470b934c46fa134609b997504331ca21433229b5",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/linops.py",
+      "size": 65450,
+      "sha256": "4b35962620d7fd4cd01e2e90789206efe92f59bf0fe4bd2ac80fb5c76323eaa3",
+      "remote_relative_path": "src/mr_recon/linops.py",
+      "remote_sha256": "4b35962620d7fd4cd01e2e90789206efe92f59bf0fe4bd2ac80fb5c76323eaa3",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/multi_coil/coil_est.py",
+      "size": 16688,
+      "sha256": "499f9ad8083ede5b791973a08ce617a6d1e09bcd0004c6820f30917b9fa5233c",
+      "remote_relative_path": "src/mr_recon/multi_coil/coil_est.py",
+      "remote_sha256": "499f9ad8083ede5b791973a08ce617a6d1e09bcd0004c6820f30917b9fa5233c",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/multi_coil/coil_nufft.py",
+      "size": 13393,
+      "sha256": "d9d8041f7293b0a9e842ed16d2ae888ea91b12ffd7493be6f0163097f4b588aa",
+      "remote_relative_path": "src/mr_recon/multi_coil/coil_nufft.py",
+      "remote_sha256": "d9d8041f7293b0a9e842ed16d2ae888ea91b12ffd7493be6f0163097f4b588aa",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/multi_coil/grappa.py",
+      "size": 3958,
+      "sha256": "22d7640853c54e0a63a3595611fe6ee2513c890e15acf8c3a4961e072893dbe2",
+      "remote_relative_path": "src/mr_recon/multi_coil/grappa.py",
+      "remote_sha256": "22d7640853c54e0a63a3595611fe6ee2513c890e15acf8c3a4961e072893dbe2",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/multi_coil/grappa_est.py",
+      "size": 17266,
+      "sha256": "dbf8801c5ed8f673d86e77430d860bf484880849e3d38f895788629c43c0d281",
+      "remote_relative_path": "src/mr_recon/multi_coil/grappa_est.py",
+      "remote_sha256": "dbf8801c5ed8f673d86e77430d860bf484880849e3d38f895788629c43c0d281",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/pad.py",
+      "size": 1298,
+      "sha256": "d6a6245efbe5a4f04db121d5af705d0856237eaa85df05e7ce8cb8b068a365f9",
+      "remote_relative_path": "src/mr_recon/pad.py",
+      "remote_sha256": "d6a6245efbe5a4f04db121d5af705d0856237eaa85df05e7ce8cb8b068a365f9",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/phantoms.py",
+      "size": 14304,
+      "sha256": "2485c7b0ed9f72e09fd84e6c98349efe655d5b10f6054719aa6461f3df77bee9",
+      "remote_relative_path": "src/mr_recon/phantoms.py",
+      "remote_sha256": "2485c7b0ed9f72e09fd84e6c98349efe655d5b10f6054719aa6461f3df77bee9",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/plot.py",
+      "size": 1530,
+      "sha256": "358847e3154b84fa0c03b92f1487f2758cfaa24b9ad31505e1fcd1cc1e23162d",
+      "remote_relative_path": "src/mr_recon/plot.py",
+      "remote_sha256": "358847e3154b84fa0c03b92f1487f2758cfaa24b9ad31505e1fcd1cc1e23162d",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/pmr_variance.py",
+      "size": 11276,
+      "sha256": "1c613c38f93ebd5919e1466e83528d2b65562795285279ad7c79cc313ec19663",
+      "remote_relative_path": "src/mr_recon/pmr_variance.py",
+      "remote_sha256": "1c613c38f93ebd5919e1466e83528d2b65562795285279ad7c79cc313ec19663",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/prox.py",
+      "size": 15783,
+      "sha256": "e3b3735de541310bb46fa98dbdd51c927fe4abc1b2a1f27122a68a2abbe96f26",
+      "remote_relative_path": "src/mr_recon/prox.py",
+      "remote_sha256": "e3b3735de541310bb46fa98dbdd51c927fe4abc1b2a1f27122a68a2abbe96f26",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/prox_complex_tv.py",
+      "size": 3327,
+      "sha256": "8805cd1eb3ebf1a12e7bbbc69ba920fb35c8f84e570250e4de7af9878ad9e71a",
+      "remote_relative_path": "src/mr_recon/prox_complex_tv.py",
+      "remote_sha256": "8805cd1eb3ebf1a12e7bbbc69ba920fb35c8f84e570250e4de7af9878ad9e71a",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/recons.py",
+      "size": 18086,
+      "sha256": "1e575860a83539664f5b4d5e4259ab161e71eee8c127cadcf19c4819a605d325",
+      "remote_relative_path": "src/mr_recon/recons.py",
+      "remote_sha256": "1e575860a83539664f5b4d5e4259ab161e71eee8c127cadcf19c4819a605d325",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/sh.py",
+      "size": 4886,
+      "sha256": "edd6a773665ab95d240bbb4c933d48fae06e1d116db0a56869624677ec13c82c",
+      "remote_relative_path": "src/mr_recon/sh.py",
+      "remote_sha256": "edd6a773665ab95d240bbb4c933d48fae06e1d116db0a56869624677ec13c82c",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/spatial.py",
+      "size": 7999,
+      "sha256": "fb659c6ebba62954eb59fe0c63240e06b9a957247e96e96cb24f902f6d6a9b0b",
+      "remote_relative_path": "src/mr_recon/spatial.py",
+      "remote_sha256": "fb659c6ebba62954eb59fe0c63240e06b9a957247e96e96cb24f902f6d6a9b0b",
+      "exact_bytes": true
+    },
+    {
+      "path": "src/mr_recon/utils.py",
+      "size": 10431,
+      "sha256": "b4d1b3fe56f5fb3c60c9389000ec9cb8670f896a42e33845d5d38498452ce4fb",
+      "remote_relative_path": "src/mr_recon/utils.py",
+      "remote_sha256": "b4d1b3fe56f5fb3c60c9389000ec9cb8670f896a42e33845d5d38498452ce4fb",
+      "exact_bytes": true
+    }
+  ]
+}

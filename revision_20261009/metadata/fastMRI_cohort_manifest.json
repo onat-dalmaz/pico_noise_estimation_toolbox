@@ -1,0 +1,457 @@
+{
+  "manifest_id": "MRM-CS-COHORT-20261009",
+  "volume_count": 12,
+  "participant_count": 11,
+  "case_count": 36,
+  "slice_indices_zero_based": [
+    13,
+    17,
+    21
+  ],
+  "contrast_volume_counts": {
+    "CORPDFS_FBK": 4,
+    "CORPD_FBK": 8
+  },
+  "volumes": [
+    {
+      "filename": "file1000000.h5",
+      "acquisition": "CORPDFS_FBK",
+      "contrast": "PD with fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            35,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            35,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            35,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000007.h5",
+      "acquisition": "CORPDFS_FBK",
+      "contrast": "PD with fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            38,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            38,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            38,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000017.h5",
+      "acquisition": "CORPDFS_FBK",
+      "contrast": "PD with fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            34,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            34,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            34,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000026.h5",
+      "acquisition": "CORPDFS_FBK",
+      "contrast": "PD with fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            30,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            30,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            30,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000031.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            40,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            40,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            40,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000033.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            33,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            33,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            33,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000041.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            38,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            38,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            38,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000052.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            38,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            38,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            38,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000071.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            35,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            35,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            35,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000073.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            31,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            31,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            31,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000107.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            30,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            30,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            30,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    },
+    {
+      "filename": "file1000108.h5",
+      "acquisition": "CORPD_FBK",
+      "contrast": "PD without fat suppression",
+      "datasets": {
+        "kspace": {
+          "shape": [
+            37,
+            320,
+            320,
+            15
+          ],
+          "dtype": "complex64"
+        },
+        "reconstruction_rss": {
+          "shape": [
+            37,
+            320,
+            320
+          ],
+          "dtype": "float32"
+        },
+        "jsense-12-cf=4/maps": {
+          "shape": [
+            37,
+            320,
+            320,
+            15,
+            1
+          ],
+          "dtype": "complex64"
+        }
+      }
+    }
+  ],
+  "participant_grouping_validation": {
+    "volume_count": 12,
+    "case_count": 36,
+    "distinct_patient_id_count": 11,
+    "distinct_frameOfReferenceUID_count": 11,
+    "partitions_concordant": true,
+    "group_size_counts": {
+      "1": 10,
+      "2": 1
+    },
+    "manifest_sha256": "209d6700ce110d004d39a81c991ae65e6d1c498d0b86a82bbb0446c9a52bc208",
+    "validation": "independent read-only HDF5 metadata check on2026-10-09",
+    "identifiers_exported": false,
+    "identifier_hashes_exported": false,
+    "membership_mapping_exported": false
+  },
+  "maps": {
+    "source": "Precomputed JSENSE maps in the Meddlr-processed local fastMRI bundle, not maps supplied by primary fastMRI.",
+    "dataset_key": "jsense-12-cf=4/maps",
+    "indexing": "[slice_idx, :, :, :, 0]",
+    "generation_source_recovered": false,
+    "generation_parameters_verified": false,
+    "note": "The dataset key is retained metadata, not sufficient evidence for exact calibration-generation parameters."
+  },
+  "historical_continuity": {
+    "original_manuscript_counts": [
+      10,
+      15
+    ],
+    "original_cohort_mapping_recovered": false,
+    "current_protocol": "Documented complex-TV cohort rerun; no claim that the original 10/15 counts are merely typographical errors."
+  }
+}
