@@ -1,7 +1,9 @@
 # Fast Voxelwise SNR Estimation for Iterative MRI Reconstructions
 
 PICO toolbox for Dalmaz et al., *Fast Voxelwise SNR Estimation for Iterative
-MRI Reconstructions* (submitted to *Magnetic Resonance in Medicine*, 2026).
+MRI Reconstructions* (accepted for publication in *Magnetic Resonance in Medicine*, 2026).
+
+[Online journal article](https://doi.org/10.1002/mrm.70674)
 
 This repository implements **PICO — Probing Image-space COvariance** —
 a stochastic diagonal estimator for voxelwise noise variance maps
@@ -141,15 +143,21 @@ $\mathbf{u}^{(i)} = \mathbf{J}_f(\mathbf{k}_0)\,\mathbf{v}^{(i)}$.
 
 ## Citation
 
-PICO is built on top of the `mr_recon` library.
+If you use PICO, please cite:
+
+Dalmaz, O., Abraham, D., Toews, A. R., Chaudhari, A. S., Setsompop, K., &
+Hargreaves, B. A. (2026). Fast Voxelwise SNR Estimation for Iterative MRI
+Reconstructions. *Magnetic Resonance in Medicine*.
+[doi:10.1002/mrm.70674](https://doi.org/10.1002/mrm.70674)
 
 ```bibtex
-@inproceedings{Onat2026Sedona,
-  author={Onat Dalmaz and Daniel R. Abraham and Alexander R. Toews and Akshay S. Chaudhari and  Kawin Setsompop and Brian A. Hargreaves},
-  title = {Fast {SNR} and g-factor mapping for image-based iterative reconstructions},
-  booktitle = {Proceedings of the ISMRM Workshop on Data Sampling and Reconstruction},
-  year      = {2026},
-  address   = {Sedona, USA},
+@article{Dalmaz2026PICO,
+  author  = {Dalmaz, Onat and Abraham, Daniel and Toews, Alexander R. and Chaudhari, Akshay S. and Setsompop, Kawin and Hargreaves, Brian A.},
+  title   = {Fast Voxelwise {SNR} Estimation for Iterative {MRI} Reconstructions},
+  journal = {Magnetic Resonance in Medicine},
+  year    = {2026},
+  doi     = {10.1002/mrm.70674},
+  url     = {https://doi.org/10.1002/mrm.70674}
 }
 ```
 
